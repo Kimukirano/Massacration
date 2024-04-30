@@ -44,6 +44,33 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AimButton"",
+                    ""type"": ""Button"",
+                    ""id"": ""aa312b13-4062-45a2-8d2f-9c60d7c62c48"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AimControl"",
+                    ""type"": ""Value"",
+                    ""id"": ""15a937a5-3348-4e99-b0d1-2e543229ed66"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""GunReload"",
+                    ""type"": ""Button"",
+                    ""id"": ""926fa7ba-c4af-425b-9a6c-31876830a897"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -103,7 +130,7 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""Gamepad"",
+                    ""name"": ""Gamepad Arrows"",
                     ""id"": ""c804983e-f5bc-4029-9021-8c0c3c3e7419"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
@@ -158,6 +185,61 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""Gamepad Left Analogic"",
+                    ""id"": ""2e329f61-70b5-4c5d-b219-27711865a97f"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Moviment"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""fe318d27-70f0-4a2f-8d7a-cb6da3320ffb"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Moviment"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""247ae461-e928-4ff6-9db6-21fa3768f133"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Moviment"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""df559c9a-3b43-4f3e-a629-0850d6d8d716"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Moviment"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""50c490a6-2e04-4f3b-b784-417f78f225e0"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Moviment"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""b0f7c0f7-e51b-4865-a20f-4ca3d31fc967"",
                     ""path"": ""<Mouse>/leftButton"",
@@ -178,6 +260,105 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7bcb2ceb-ce1a-4f2a-8062-36e5dbe7c3ac"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AimButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6e347c96-5fd7-4bf2-b7ce-7681b63fdc8c"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AimButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Gameped Aim"",
+                    ""id"": ""4e151838-b799-44cc-a1d4-dd134d5080d7"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AimControl"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""c64ad697-477a-4ce2-b705-74398638eb10"",
+                    ""path"": ""<Gamepad>/rightStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AimControl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""4583c800-20ce-4efb-9545-b9c1ab1d4cc4"",
+                    ""path"": ""<Gamepad>/rightStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AimControl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""d050d821-a398-4248-9dbf-5f4e5d910b7e"",
+                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AimControl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""4d1856f3-1f0c-401c-93cc-c7e280ff7181"",
+                    ""path"": ""<Gamepad>/rightStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AimControl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e5939705-b3e6-4655-a489-1e56a6e24e65"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GunReload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""42851a59-8b68-40e7-9f0e-0a485a6d3ad2"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GunReload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -188,6 +369,9 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
         m_Player1 = asset.FindActionMap("Player1", throwIfNotFound: true);
         m_Player1_Moviment = m_Player1.FindAction("Moviment", throwIfNotFound: true);
         m_Player1_Shoot = m_Player1.FindAction("Shoot", throwIfNotFound: true);
+        m_Player1_AimButton = m_Player1.FindAction("AimButton", throwIfNotFound: true);
+        m_Player1_AimControl = m_Player1.FindAction("AimControl", throwIfNotFound: true);
+        m_Player1_GunReload = m_Player1.FindAction("GunReload", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -251,12 +435,18 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
     private List<IPlayer1Actions> m_Player1ActionsCallbackInterfaces = new List<IPlayer1Actions>();
     private readonly InputAction m_Player1_Moviment;
     private readonly InputAction m_Player1_Shoot;
+    private readonly InputAction m_Player1_AimButton;
+    private readonly InputAction m_Player1_AimControl;
+    private readonly InputAction m_Player1_GunReload;
     public struct Player1Actions
     {
         private @Player1Inputs m_Wrapper;
         public Player1Actions(@Player1Inputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Moviment => m_Wrapper.m_Player1_Moviment;
         public InputAction @Shoot => m_Wrapper.m_Player1_Shoot;
+        public InputAction @AimButton => m_Wrapper.m_Player1_AimButton;
+        public InputAction @AimControl => m_Wrapper.m_Player1_AimControl;
+        public InputAction @GunReload => m_Wrapper.m_Player1_GunReload;
         public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -272,6 +462,15 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
             @Shoot.started += instance.OnShoot;
             @Shoot.performed += instance.OnShoot;
             @Shoot.canceled += instance.OnShoot;
+            @AimButton.started += instance.OnAimButton;
+            @AimButton.performed += instance.OnAimButton;
+            @AimButton.canceled += instance.OnAimButton;
+            @AimControl.started += instance.OnAimControl;
+            @AimControl.performed += instance.OnAimControl;
+            @AimControl.canceled += instance.OnAimControl;
+            @GunReload.started += instance.OnGunReload;
+            @GunReload.performed += instance.OnGunReload;
+            @GunReload.canceled += instance.OnGunReload;
         }
 
         private void UnregisterCallbacks(IPlayer1Actions instance)
@@ -282,6 +481,15 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
             @Shoot.started -= instance.OnShoot;
             @Shoot.performed -= instance.OnShoot;
             @Shoot.canceled -= instance.OnShoot;
+            @AimButton.started -= instance.OnAimButton;
+            @AimButton.performed -= instance.OnAimButton;
+            @AimButton.canceled -= instance.OnAimButton;
+            @AimControl.started -= instance.OnAimControl;
+            @AimControl.performed -= instance.OnAimControl;
+            @AimControl.canceled -= instance.OnAimControl;
+            @GunReload.started -= instance.OnGunReload;
+            @GunReload.performed -= instance.OnGunReload;
+            @GunReload.canceled -= instance.OnGunReload;
         }
 
         public void RemoveCallbacks(IPlayer1Actions instance)
@@ -303,5 +511,8 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
     {
         void OnMoviment(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
+        void OnAimButton(InputAction.CallbackContext context);
+        void OnAimControl(InputAction.CallbackContext context);
+        void OnGunReload(InputAction.CallbackContext context);
     }
 }
