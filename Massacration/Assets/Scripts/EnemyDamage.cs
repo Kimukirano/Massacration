@@ -13,6 +13,11 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
+            other.GetComponent<BulletLife>().BulleLife--;
+            if (other.GetComponent<BulletLife>().BulleLife <=0)
+            {
+                Destroy(other.gameObject);
+            }
             ReceiveDamage();
         }
     }

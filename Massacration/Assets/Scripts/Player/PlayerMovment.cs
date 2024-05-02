@@ -24,6 +24,8 @@ public class PlayerMovment : MonoBehaviour
     private string Direction;
     public static Vector3 MouseDirection;
     public static GameObject Player;
+    [SerializeField] GameObject Gun;
+    private SpriteRenderer GunSp;
     public void SetMoviment(InputAction.CallbackContext value)
     {
         moviment = value.ReadValue<Vector2>();
@@ -111,14 +113,14 @@ public class PlayerMovment : MonoBehaviour
     }
     public void Start()
     {
-       
+        GunSp = Gun.GetComponent<SpriteRenderer>();
     }
     private void Awake()
     {
         Player = gameObject;
         spriteRenderer = GetComponent<SpriteRenderer>();
         NormalMovSpeedReference = NormalMovSpeed;
-        
+
     }
     public void Update()
     {
@@ -138,10 +140,11 @@ public class PlayerMovment : MonoBehaviour
         {
             // GetComponent<Animator>().Play("Parado");
         }
-        else if (NewPosition != CurrentPosition)
+        else
         {
             if (NewPosition.x > CurrentPosition.x)
             {
+                GunSp.sortingOrder = 2;
                 if(NewPosition.y == CurrentPosition.y)
                 {
                     if(InAim==true)
@@ -256,6 +259,7 @@ public class PlayerMovment : MonoBehaviour
             }
             else if (NewPosition.x < CurrentPosition.x)
             {
+                GunSp.sortingOrder = 1;
                 if (NewPosition.y == CurrentPosition.y)
                 {
                     if (InAim == true)
@@ -373,6 +377,7 @@ public class PlayerMovment : MonoBehaviour
             {
                 if (NewPosition.y > CurrentPosition.y)
                 {
+                    GunSp.sortingOrder = 1;
                     if (InAim == true)
                     {
                         switch (GetMouseAngle())
@@ -410,6 +415,7 @@ public class PlayerMovment : MonoBehaviour
                 }
                 else
                 {
+                    GunSp.sortingOrder = 2;
                     if (InAim == true)
                     {
                         switch (GetMouseAngle())
