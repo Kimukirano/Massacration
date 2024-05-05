@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] float RecoilCutOffTime;
+    [SerializeField] Transform Transformcamera;
     private GameObject Bullet;
     private float BulletSpeed;
     private int BulletLife;
@@ -294,6 +296,7 @@ public class PlayerShoot : MonoBehaviour
             Ak47_Ammo--;
             AmmoText.text = Ak47_Ammo.ToString() + "/" + Ak47_TotalAmmo.ToString();
             Recoil(Ak47_RecoilForce, Ak47_RecoilVelocity);
+            ShakeCamera();
         }
         else
         {
@@ -314,6 +317,7 @@ public class PlayerShoot : MonoBehaviour
             MP5_Ammo--;
             AmmoText.text = MP5_Ammo.ToString() + "/" + MP5_TotalAmmo.ToString();
             Recoil(MP5_RecoilForce, MP5_RecoilVelocity);
+            ShakeCamera();
         }
         else
         {
@@ -334,6 +338,7 @@ public class PlayerShoot : MonoBehaviour
             DesertEagle_Ammo--;
             AmmoText.text = DesertEagle_Ammo.ToString() + "/" + DesertEagle_TotalAmmo.ToString();
             Recoil(DesertEagle_RecoilForce, DesertEagle_RecoilVelocity);
+            ShakeCamera();
         }
         else
         {
@@ -354,6 +359,7 @@ public class PlayerShoot : MonoBehaviour
             M4_Ammo--;
             AmmoText.text = M4_Ammo.ToString() + "/" + M4_TotalAmmo.ToString();
             Recoil(M4_RecoilForce, M4_RecoilVelocity);
+            ShakeCamera();
         }
         else
         {
@@ -427,12 +433,16 @@ public class PlayerShoot : MonoBehaviour
         }
         
     }
+    public void ShakeCamera()
+    {
+        Transformcamera.DOShakePosition(0.1f, 0.2f, 10, 90f, false, false, ShakeRandomnessMode.Full);
+    }
     public void CancelRigidbody2DForces()
     {
         rb.velocity = new Vector3(0f, 0f, 0f);
         rb.totalForce = new Vector3(0f, 0f, 0f);
     }
-        public void Recoil(float GunRecoilForce, float GunRecoilVelocity)
+    public void Recoil(float GunRecoilForce, float GunRecoilVelocity)
     {
         Vector3 recoilDirection = PlayerMovment.MouseDirection * -1;
 

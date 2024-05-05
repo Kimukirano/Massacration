@@ -611,6 +611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 157758377}
   - component: {fileID: 157758376}
+  - component: {fileID: 157758378}
   m_Layer: 0
   m_Name: Global PosProcessing
   m_TagString: Untagged
@@ -630,7 +631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IsGlobal: 1
+  m_IsGlobal: 0
   priority: 0
   blendDistance: 0
   weight: 1
@@ -643,13 +644,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157758375}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.461971, y: 27.978218, z: -0.113427795}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.23, y: -0.64, z: 9.904122}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 519420032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &157758378
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157758375}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 15.8879385, y: 10.202387, z: 1}
+  m_Center: {x: 2.2273297, y: 0.5861387, z: 0}
 --- !u!1 &174823598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,7 +1533,8 @@ Transform:
   m_LocalPosition: {x: -0.124273576, y: 0.63, z: -10.01755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 157758377}
   m_Father: {fileID: 2023589773}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &564837142
@@ -10854,10 +10877,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 112ee93cdc9f335429400f60153b2c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 2023589777}
+  RecoilCutOffTime: 0.3
   AmmoText: {fileID: 23113953}
   Gun: {fileID: 2047264576}
   WeaponPanel: {fileID: 136751769}
   GunBulletUIimage: {fileID: 592915031}
+  recoilMode: 1
   UnselectedWeaponColor: {r: 0.14901961, g: 0.1254902, b: 0.1254902, a: 0.39215687}
   SelectedWeaponColor: {r: 1, g: 1, b: 1, a: 0.39215687}
   usingWeapon: 0
@@ -10869,7 +10895,8 @@ MonoBehaviour:
   Ak47_BulletPrefab: {fileID: 2673535176190151142, guid: 2a65b9ff451c84f4abfd29ddd31e63c9, type: 3}
   Ak47_BulletSpeed: 200
   Ak47_DelayShoot: 0.2
-  Ak47_Recoil: 0
+  Ak47_RecoilForce: 0
+  Ak47_RecoilVelocity: 0
   Ak47_Damage: 10
   Ak47_BulletHP: 3
   AK47_Sprite: {fileID: 21300000, guid: ee5cb6aa01a4410488f54718e45e7c73, type: 3}
@@ -10886,7 +10913,8 @@ MonoBehaviour:
   MP5_BulletPrefab: {fileID: 2673535176190151142, guid: 4fa8caccdc2e9b944b6034cdfe723b2e, type: 3}
   MP5_BulletSpeed: 200
   MP5_DelayShoot: 0.2
-  MP5_Recoil: 0
+  MP5_RecoilForce: 400
+  MP5_RecoilVelocity: 20
   MP5_Damage: 10
   MP5_BulletHP: 2
   MP5_Sprite: {fileID: 21300000, guid: aabd92ba23523ae41a4706410e8bf755, type: 3}
@@ -10903,7 +10931,8 @@ MonoBehaviour:
   DesertEagle_BulletPrefab: {fileID: 2673535176190151142, guid: e9a14efd58960824d94d999b794839fd, type: 3}
   DesertEagle_BulletSpeed: 200
   DesertEagle_DelayShoot: 0.7
-  DesertEagle_Recoil: 0
+  DesertEagle_RecoilForce: 400
+  DesertEagle_RecoilVelocity: 20
   DesertEagle_Damage: 10
   DesertEagle_BulletHP: 4
   DesertEagle_Sprite: {fileID: 21300000, guid: e5f7018565590864f939102bc9c36b9b, type: 3}
@@ -10920,7 +10949,8 @@ MonoBehaviour:
   M4_BulletPrefab: {fileID: 2673535176190151142, guid: 67517aedd40b201458471b6e40f3f510, type: 3}
   M4_BulletSpeed: 200
   M4_DelayShoot: 0.2
-  M4_Recoil: 0
+  M4_RecoilForce: 400
+  M4_RecoilVelocity: 20
   M4_Damage: 10
   M4_BulletHP: 2
   M4_Sprite: {fileID: 21300000, guid: da9a5f8a69853e841a6c64710efa8aa4, type: 3}
@@ -11950,7 +11980,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 619394802}
   - {fileID: 808978446}
-  - {fileID: 157758377}
   - {fileID: 2023589773}
   - {fileID: 1382360302}
   - {fileID: 1164407039}
