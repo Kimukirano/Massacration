@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Claims;
@@ -10,6 +11,8 @@ using static PlayerShoot;
 
 public class PlayerShoot : MonoBehaviour
 {
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] float RecoilCutOffTime;
     private GameObject Bullet;
     private float BulletSpeed;
     private int BulletLife;
@@ -32,6 +35,12 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] GameObject WeaponPanel;
     [SerializeField] GameObject GunBulletUIimage;
     private Image GunBulletUIimageImage;
+    public enum RecoilMode
+    {
+        Force,
+        velocity,
+    }
+    public RecoilMode recoilMode;
     [SerializeField] Color UnselectedWeaponColor;
     [SerializeField] Color SelectedWeaponColor;
     public enum UsingWeapon
@@ -52,6 +61,8 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] GameObject Ak47_BulletPrefab;
     [SerializeField] float Ak47_BulletSpeed;
     [SerializeField] float Ak47_DelayShoot;
+    [SerializeField] float Ak47_RecoilForce;
+    [SerializeField] float Ak47_RecoilVelocity;
     [SerializeField] int Ak47_Damage;
     [SerializeField] int Ak47_BulletHP;
     [SerializeField] Sprite AK47_Sprite;
@@ -71,6 +82,8 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] GameObject MP5_BulletPrefab;
     [SerializeField] float MP5_BulletSpeed;
     [SerializeField] float MP5_DelayShoot;
+    [SerializeField] float MP5_RecoilForce;
+    [SerializeField] float MP5_RecoilVelocity;
     [SerializeField] int MP5_Damage;
     [SerializeField] int MP5_BulletHP;
     [SerializeField] Sprite MP5_Sprite;
@@ -90,6 +103,8 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] GameObject DesertEagle_BulletPrefab;
     [SerializeField] float DesertEagle_BulletSpeed;
     [SerializeField] float DesertEagle_DelayShoot;
+    [SerializeField] float DesertEagle_RecoilForce;
+    [SerializeField] float DesertEagle_RecoilVelocity;
     [SerializeField] int DesertEagle_Damage;
     [SerializeField] int DesertEagle_BulletHP;
     [SerializeField] Sprite DesertEagle_Sprite;
@@ -109,6 +124,8 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] GameObject M4_BulletPrefab;
     [SerializeField] float M4_BulletSpeed;
     [SerializeField] float M4_DelayShoot;
+    [SerializeField] float M4_RecoilForce;
+    [SerializeField] float M4_RecoilVelocity;
     [SerializeField] int M4_Damage;
     [SerializeField] int M4_BulletHP;
     [SerializeField] Sprite M4_Sprite;
@@ -276,6 +293,7 @@ public class PlayerShoot : MonoBehaviour
             BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * Ak47_BulletSpeed;
             Ak47_Ammo--;
             AmmoText.text = Ak47_Ammo.ToString() + "/" + Ak47_TotalAmmo.ToString();
+            Recoil(Ak47_RecoilForce, Ak47_RecoilVelocity);
         }
         else
         {
@@ -295,6 +313,7 @@ public class PlayerShoot : MonoBehaviour
             BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * MP5_BulletSpeed;
             MP5_Ammo--;
             AmmoText.text = MP5_Ammo.ToString() + "/" + MP5_TotalAmmo.ToString();
+            Recoil(MP5_RecoilForce, MP5_RecoilVelocity);
         }
         else
         {
@@ -314,6 +333,7 @@ public class PlayerShoot : MonoBehaviour
             BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * DesertEagle_BulletSpeed;
             DesertEagle_Ammo--;
             AmmoText.text = DesertEagle_Ammo.ToString() + "/" + DesertEagle_TotalAmmo.ToString();
+            Recoil(DesertEagle_RecoilForce, DesertEagle_RecoilVelocity);
         }
         else
         {
@@ -333,6 +353,7 @@ public class PlayerShoot : MonoBehaviour
             BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * M4_BulletSpeed;
             M4_Ammo--;
             AmmoText.text = M4_Ammo.ToString() + "/" + M4_TotalAmmo.ToString();
+            Recoil(M4_RecoilForce, M4_RecoilVelocity);
         }
         else
         {
@@ -406,6 +427,26 @@ public class PlayerShoot : MonoBehaviour
         }
         
     }
+    public void CancelRigidbody2DForces()
+    {
+        rb.velocity = new Vector3(0f, 0f, 0f);
+        rb.totalForce = new Vector3(0f, 0f, 0f);
+    }
+        public void Recoil(float GunRecoilForce, float GunRecoilVelocity)
+    {
+        Vector3 recoilDirection = PlayerMovment.MouseDirection * -1;
+
+        if (recoilMode == RecoilMode.Force)
+        {
+            rb.AddForce(recoilDirection * GunRecoilForce);
+        }
+        else
+        {
+            rb.velocity = recoilDirection * GunRecoilVelocity;
+        }
+        Invoke("CancelRigidbody2DForces", RecoilCutOffTime);
+    }
+
     public void Ak47Reload()
     {
         int AmmoToReload = Ak47_MagSize - Ak47_Ammo;
