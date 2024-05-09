@@ -15,6 +15,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] float RecoilCutOffTime;
     [SerializeField] Transform Transformcamera;
+    [SerializeField] GameObject ShootLightPrefab;
     private GameObject Bullet;
     private float BulletSpeed;
     private int BulletLife;
@@ -293,6 +294,7 @@ public class PlayerShoot : MonoBehaviour
             BulletSpawmPosition.y += 0.5f;
             GameObject BulletAtual = Instantiate(Ak47_BulletPrefab, BulletSpawmPosition, Quaternion.identity);
             BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * Ak47_BulletSpeed;
+            Instantiate(ShootLightPrefab, BulletSpawmPosition, Quaternion.identity); 
             Ak47_Ammo--;
             AmmoText.text = Ak47_Ammo.ToString() + "/" + Ak47_TotalAmmo.ToString();
             Recoil(Ak47_RecoilForce, Ak47_RecoilVelocity);
@@ -314,6 +316,7 @@ public class PlayerShoot : MonoBehaviour
             BulletSpawmPosition.y += 0.5f;
             GameObject BulletAtual = Instantiate(MP5_BulletPrefab, BulletSpawmPosition, Quaternion.identity);
             BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * MP5_BulletSpeed;
+            Instantiate(ShootLightPrefab, BulletSpawmPosition, Quaternion.identity);
             MP5_Ammo--;
             AmmoText.text = MP5_Ammo.ToString() + "/" + MP5_TotalAmmo.ToString();
             Recoil(MP5_RecoilForce, MP5_RecoilVelocity);
@@ -335,6 +338,7 @@ public class PlayerShoot : MonoBehaviour
             BulletSpawmPosition.y += 0.5f;
             GameObject BulletAtual = Instantiate(DesertEagle_BulletPrefab, BulletSpawmPosition, Quaternion.identity);
             BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * DesertEagle_BulletSpeed;
+            Instantiate(ShootLightPrefab, BulletSpawmPosition, Quaternion.identity);
             DesertEagle_Ammo--;
             AmmoText.text = DesertEagle_Ammo.ToString() + "/" + DesertEagle_TotalAmmo.ToString();
             Recoil(DesertEagle_RecoilForce, DesertEagle_RecoilVelocity);
@@ -356,6 +360,7 @@ public class PlayerShoot : MonoBehaviour
             BulletSpawmPosition.y += 0.5f;
             GameObject BulletAtual = Instantiate(M4_BulletPrefab, BulletSpawmPosition, Quaternion.identity);
             BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * M4_BulletSpeed;
+            Instantiate(ShootLightPrefab, BulletSpawmPosition, Quaternion.identity);
             M4_Ammo--;
             AmmoText.text = M4_Ammo.ToString() + "/" + M4_TotalAmmo.ToString();
             Recoil(M4_RecoilForce, M4_RecoilVelocity);

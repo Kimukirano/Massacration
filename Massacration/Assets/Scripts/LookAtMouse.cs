@@ -11,27 +11,32 @@ public class LookAtMouse : MonoBehaviour
     }
     void Update()
     {
-        Vector3 MousePosition = Input.mousePosition;
+        if(PauseGame.Paused == false){
 
-        MousePosition = Camera.main.ScreenToWorldPoint(MousePosition);
+            Vector3 MousePosition = Input.mousePosition;
 
-        Vector2 MouseDirection = new Vector2(MousePosition.x - transform.position.x, MousePosition.y - transform.position.y);
+            MousePosition = Camera.main.ScreenToWorldPoint(MousePosition);
 
-        float angle = Mathf.Atan2(MouseDirection.y, MouseDirection.x) * Mathf.Rad2Deg;
+            Vector2 MouseDirection = new Vector2(MousePosition.x - transform.position.x, MousePosition.y - transform.position.y);
 
-        Quaternion rotacao = Quaternion.AngleAxis(angle + 10, Vector3.forward);
+            float angle = Mathf.Atan2(MouseDirection.y, MouseDirection.x) * Mathf.Rad2Deg;
 
-        transform.rotation = rotacao;
+            Quaternion rotacao = Quaternion.AngleAxis(angle + 10, Vector3.forward);
+
+            transform.rotation = rotacao;
+
+
+            if (this.gameObject.transform.rotation.z > 0.77f || this.gameObject.transform.rotation.z < -0.67f)
+            {
+                Sp.flipY = true;
+            }
+            else
+            {
+                Sp.flipY = false;
+            }
+        }
 
         
-        if (this.gameObject.transform.rotation.z > 0.77f || this.gameObject.transform.rotation.z < -0.67f)
-        {
-            Sp.flipY = true;
-        }
-        else
-        {
-            Sp.flipY = false;
-        }
 
     }
 }

@@ -116,6 +116,33 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""77f162c7-3398-4179-affe-90e093d19d40"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""c211858d-2280-498a-87aa-88754ab5a6be"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MelleAtack"",
+                    ""type"": ""Button"",
+                    ""id"": ""b9d050b5-a2d2-4cbd-998f-a1f9d682c340"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -481,6 +508,72 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
                     ""action"": ""SelectWeapon4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""05610d5f-df2a-44af-8d40-2c63b5f8b61c"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""425a75e3-14e9-4002-a086-649118211ae8"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e1550cd0-e309-46ce-8130-85bb1780a383"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ac43048-a285-49e2-bc6b-f01d9262af18"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f0b0165d-b556-4377-9b9e-fe92e31a7b8f"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MelleAtack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""17b27188-70dc-472a-9d7f-63115569ab9b"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MelleAtack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -499,6 +592,9 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
         m_Player1_SelectWeapon2 = m_Player1.FindAction("SelectWeapon2", throwIfNotFound: true);
         m_Player1_SelectWeapon3 = m_Player1.FindAction("SelectWeapon3", throwIfNotFound: true);
         m_Player1_SelectWeapon4 = m_Player1.FindAction("SelectWeapon4", throwIfNotFound: true);
+        m_Player1_Interact = m_Player1.FindAction("Interact", throwIfNotFound: true);
+        m_Player1_Pause = m_Player1.FindAction("Pause", throwIfNotFound: true);
+        m_Player1_MelleAtack = m_Player1.FindAction("MelleAtack", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -570,6 +666,9 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player1_SelectWeapon2;
     private readonly InputAction m_Player1_SelectWeapon3;
     private readonly InputAction m_Player1_SelectWeapon4;
+    private readonly InputAction m_Player1_Interact;
+    private readonly InputAction m_Player1_Pause;
+    private readonly InputAction m_Player1_MelleAtack;
     public struct Player1Actions
     {
         private @Player1Inputs m_Wrapper;
@@ -584,6 +683,9 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
         public InputAction @SelectWeapon2 => m_Wrapper.m_Player1_SelectWeapon2;
         public InputAction @SelectWeapon3 => m_Wrapper.m_Player1_SelectWeapon3;
         public InputAction @SelectWeapon4 => m_Wrapper.m_Player1_SelectWeapon4;
+        public InputAction @Interact => m_Wrapper.m_Player1_Interact;
+        public InputAction @Pause => m_Wrapper.m_Player1_Pause;
+        public InputAction @MelleAtack => m_Wrapper.m_Player1_MelleAtack;
         public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -623,6 +725,15 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
             @SelectWeapon4.started += instance.OnSelectWeapon4;
             @SelectWeapon4.performed += instance.OnSelectWeapon4;
             @SelectWeapon4.canceled += instance.OnSelectWeapon4;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
+            @MelleAtack.started += instance.OnMelleAtack;
+            @MelleAtack.performed += instance.OnMelleAtack;
+            @MelleAtack.canceled += instance.OnMelleAtack;
         }
 
         private void UnregisterCallbacks(IPlayer1Actions instance)
@@ -657,6 +768,15 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
             @SelectWeapon4.started -= instance.OnSelectWeapon4;
             @SelectWeapon4.performed -= instance.OnSelectWeapon4;
             @SelectWeapon4.canceled -= instance.OnSelectWeapon4;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
+            @MelleAtack.started -= instance.OnMelleAtack;
+            @MelleAtack.performed -= instance.OnMelleAtack;
+            @MelleAtack.canceled -= instance.OnMelleAtack;
         }
 
         public void RemoveCallbacks(IPlayer1Actions instance)
@@ -686,5 +806,8 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
         void OnSelectWeapon2(InputAction.CallbackContext context);
         void OnSelectWeapon3(InputAction.CallbackContext context);
         void OnSelectWeapon4(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnMelleAtack(InputAction.CallbackContext context);
     }
 }
