@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3f22951f662b04fb8fc685affd2575, type: 3}
+  m_Name: Ak-47
+  m_EditorClassIdentifier: 
+  WeaponName: Ak-47
+  Automatic: 1
+  TotalAmmo: 180
+  Ammo: 60
+  MagSize: 60
+  BulletPrefab: {fileID: 2673535176190151142, guid: 2a65b9ff451c84f4abfd29ddd31e63c9, type: 3}
+  BulletSpeed: 200
+  DelayShoot: 0.2
+  RecoilForce: 200
+  RecoilVelocity: 10
+  Damage: 10
+  BulletHP: 3
+  Sprite: {fileID: 21300000, guid: ee5cb6aa01a4410488f54718e45e7c73, type: 3}
+  ReloadingTime: 1.5
+  ShootingSound: {fileID: 8300000, guid: 011e08c1f7bf7d14e87b772638fed2fb, type: 3}
+  ReloadingSound: {fileID: 8300000, guid: 32d766e2bc0f83b46b63cf9bcccd24e5, type: 3}
+  EmptyMagSound: {fileID: 8300000, guid: 97a1664401c2a144abb9da34f7dfe53e, type: 3}
+  Image_Panel: {fileID: 21300000, guid: ee5cb6aa01a4410488f54718e45e7c73, type: 3}

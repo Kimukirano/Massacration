@@ -5,10 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
-  - Door
-  - LockedDoor
   - DoorBar
   - Katana
+  - HideSpot
+  - LockedRoomHidingSpot
+  - Door1
+  - Door2
+  - Door3
+  - Door4
+  - LockedDoor1
+  - LockedDoor2
+  - LockedDoor3
+  - LockedDoor4
+  - Enemy
   layers:
   - Default
   - TransparentFX

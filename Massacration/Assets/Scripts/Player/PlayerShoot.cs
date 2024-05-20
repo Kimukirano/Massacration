@@ -52,6 +52,7 @@ public class PlayerShoot : MonoBehaviour
         MP5,
         DesertEagle,
         M4,
+        Nothing,
     }
     public UsingWeapon usingWeapon;
 
@@ -139,6 +140,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] GameObject M4_Panel;
     private Image M4_PanelImage;
 
+    public static bool ShootingStarted = false;
     public void UseWeapon1()
     {
         usingWeapon = UsingWeapon.AK_47;
@@ -288,6 +290,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if(Ak47_Ammo > 0 && OnReloading == false)
         {
+            ShootingStarted = true;
             gameObject.GetComponent<AudioSource>().clip = Ak47_ShootingSound;
             gameObject.GetComponent<AudioSource>().Play();
             Vector3 BulletSpawmPosition = gameObject.transform.position;
@@ -310,6 +313,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if (MP5_Ammo > 0 && OnReloading == false)
         {
+            ShootingStarted = true;
             gameObject.GetComponent<AudioSource>().clip = MP5_ShootingSound;
             gameObject.GetComponent<AudioSource>().Play();
             Vector3 BulletSpawmPosition = gameObject.transform.position;
@@ -332,6 +336,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if (DesertEagle_Ammo > 0 && OnReloading == false)
         {
+            ShootingStarted = true;
             gameObject.GetComponent<AudioSource>().clip = DesertEagle_ShootingSound;
             gameObject.GetComponent<AudioSource>().Play();
             Vector3 BulletSpawmPosition = gameObject.transform.position;
@@ -354,6 +359,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if (M4_Ammo > 0 && OnReloading == false)
         {
+            ShootingStarted = true;
             gameObject.GetComponent<AudioSource>().clip = M4_ShootingSound;
             gameObject.GetComponent<AudioSource>().Play();
             Vector3 BulletSpawmPosition = gameObject.transform.position;
