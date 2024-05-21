@@ -314,7 +314,7 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         
-        if (PlayerShoot.ShootingStarted == true)
+        if (PlayerShooting.ShootingStarted == true)
         {
             ShootingReaction();
         }
@@ -322,28 +322,5 @@ public class EnemyAI : MonoBehaviour
         {
             agent.SetDestination(Player.transform.position);
         }
-        /**
-        switch (state)
-        {
-            case State.Idle: 
-                break;
-            case State.Hiding: Hide(); 
-                break;
-            case State.EscapeToExit: RunToExit();
-                break;
-            case State.LockingRoom: LockRoom(); 
-                break;
-            case State.PretendDeath: PretendToBeDead();
-                break;
-            case State.Crawlling: CrawllerMode();
-                break;
-            case State.AtackPlayer: Atack();
-                break;
-            case State.BegToLive: BeggingToLive();
-                break;
-            case State.Death: Death();
-                break;
-        }
-        **/
     }
 }

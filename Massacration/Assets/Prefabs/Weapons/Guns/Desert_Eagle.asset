@@ -24,9 +24,11 @@ MonoBehaviour:
   RecoilVelocity: 10
   Damage: 10
   BulletHP: 4
-  Sprite: {fileID: 21300000, guid: e5f7018565590864f939102bc9c36b9b, type: 3}
+  GunSprite: {fileID: 21300000, guid: 62dd7877e8c32d949877cdd927d16e3d, type: 3}
   ReloadingTime: 1.5
   ShootingSound: {fileID: 8300000, guid: 011e08c1f7bf7d14e87b772638fed2fb, type: 3}
   ReloadingSound: {fileID: 8300000, guid: 32d766e2bc0f83b46b63cf9bcccd24e5, type: 3}
   EmptyMagSound: {fileID: 8300000, guid: 97a1664401c2a144abb9da34f7dfe53e, type: 3}
-  Image_Panel: {fileID: 21300000, guid: e5f7018565590864f939102bc9c36b9b, type: 3}
+  Image_Panel: {fileID: 21300000, guid: 62dd7877e8c32d949877cdd927d16e3d, type: 3}
+  CaseCartridge: {fileID: 2416068697512837347, guid: 0c430e217b378754eb1bb7ed7843f450, type: 3}
+  GunSpriteMirror: {fileID: 21300000, guid: 89762196db874dc468fd5ecdb0fb43f2, type: 3}

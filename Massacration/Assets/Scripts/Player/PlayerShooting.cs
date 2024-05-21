@@ -41,6 +41,9 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] GameObject WeaponPanel;
     [SerializeField] GameObject GunBulletUIimage;
     private Image GunBulletUIimageImage;
+    private GameObject CaseCartridge;
+    public static Sprite GunSpriteMirror;
+    public static Sprite GunSprite;
     public enum RecoilMode
     {
         Force,
@@ -57,7 +60,7 @@ public class PlayerShooting : MonoBehaviour
         Slot4,
         Nothing,
     }
-    public UsingWeapon usingWeapon;
+    public static UsingWeapon usingWeapon;
 
     [Header("Slot1")]
     private string Slot1_WeaponName;
@@ -72,12 +75,15 @@ public class PlayerShooting : MonoBehaviour
     private float Slot1_RecoilVelocity;
     private int Slot1_Damage;
     private int Slot1_BulletHP;
-    private Sprite Slot1_Sprite;
+    public static Sprite Slot1_Sprite;
     private float Slot1_ReloadingTime;
     private AudioClip Slot1_ShootingSound;
     private AudioClip Slot1_ReloadingSound;
     private AudioClip Slot1_EmptyMagSound;
-    [SerializeField] private GameObject Slot1_Panel;
+    private GameObject Slot1_CaseCartridge;
+    public static Sprite Slot1_GunSpriteMirror;
+    public static Sprite Slot1_GunSprite;
+   [SerializeField] private GameObject Slot1_Panel;
     private Image Slot1_PanelImage;
 
     [Header("Slot2")]
@@ -98,6 +104,9 @@ public class PlayerShooting : MonoBehaviour
     private AudioClip Slot2_ShootingSound;
     private AudioClip Slot2_ReloadingSound;
     private AudioClip Slot2_EmptyMagSound;
+    private GameObject Slot2_CaseCartridge;
+    public static Sprite Slot2_GunSpriteMirror;
+    public static Sprite Slot2_GunSprite;
     [SerializeField] private GameObject Slot2_Panel;
     private Image Slot2_PanelImage;
 
@@ -119,6 +128,9 @@ public class PlayerShooting : MonoBehaviour
     private AudioClip Slot3_ShootingSound;
     private AudioClip Slot3_ReloadingSound;
     private AudioClip Slot3_EmptyMagSound;
+    private GameObject Slot3_CaseCartridge;
+    public static Sprite Slot3_GunSpriteMirror;
+    public static Sprite Slot3_GunSprite;
     [SerializeField] private GameObject Slot3_Panel;
     private Image Slot3_PanelImage;
 
@@ -140,6 +152,9 @@ public class PlayerShooting : MonoBehaviour
     private AudioClip Slot4_ShootingSound;
     private AudioClip Slot4_ReloadingSound;
     private AudioClip Slot4_EmptyMagSound;
+    private GameObject Slot4_CaseCartridge;
+    public static Sprite Slot4_GunSpriteMirror;
+    public static Sprite Slot4_GunSprite;
     [SerializeField] private GameObject Slot4_Panel;
     private Image Slot4_PanelImage;
 
@@ -162,11 +177,14 @@ public class PlayerShooting : MonoBehaviour
                 Slot1_RecoilVelocity = Slot1SO.RecoilVelocity;
                 Slot1_Damage = Slot1SO.Damage;
                 Slot1_BulletHP = Slot1SO.BulletHP;
-                Slot1_Sprite = Slot1SO.Sprite;
+                Slot1_GunSprite = Slot1SO.GunSprite;
                 Slot1_ReloadingTime = Slot1SO.ReloadingTime;
                 Slot1_ShootingSound = Slot1SO.ShootingSound;
                 Slot1_ReloadingSound = Slot1SO.ReloadingSound;
                 Slot1_EmptyMagSound = Slot1SO.EmptyMagSound;
+                Slot1_CaseCartridge = Slot1SO.CaseCartridge;
+                Slot1_GunSpriteMirror = Slot1SO.GunSpriteMirror;
+                Slot1_GunSprite = Slot1SO.GunSprite;
                 break;
             case 2:
                 Slot2_WeaponName = Slot2SO.WeaponName;
@@ -181,11 +199,13 @@ public class PlayerShooting : MonoBehaviour
                 Slot2_RecoilVelocity = Slot2SO.RecoilVelocity;
                 Slot2_Damage = Slot2SO.Damage;
                 Slot2_BulletHP = Slot2SO.BulletHP;
-                Slot2_Sprite = Slot2SO.Sprite;
+                Slot2_GunSprite = Slot2SO.GunSprite;
                 Slot2_ReloadingTime = Slot2SO.ReloadingTime;
                 Slot2_ShootingSound = Slot2SO.ShootingSound;
                 Slot2_ReloadingSound = Slot2SO.ReloadingSound;
                 Slot2_EmptyMagSound = Slot2SO.EmptyMagSound;
+                Slot2_CaseCartridge = Slot2SO.CaseCartridge;
+                Slot2_GunSpriteMirror = Slot2SO.GunSpriteMirror;
                 break;
             case 3:
                 Slot3_WeaponName = Slot3SO.WeaponName;
@@ -200,11 +220,13 @@ public class PlayerShooting : MonoBehaviour
                 Slot3_RecoilVelocity = Slot3SO.RecoilVelocity;
                 Slot3_Damage = Slot3SO.Damage;
                 Slot3_BulletHP = Slot3SO.BulletHP;
-                Slot3_Sprite = Slot3SO.Sprite;
+                Slot3_GunSprite = Slot3SO.GunSprite;
                 Slot3_ReloadingTime = Slot3SO.ReloadingTime;
                 Slot3_ShootingSound = Slot3SO.ShootingSound;
                 Slot3_ReloadingSound = Slot3SO.ReloadingSound;
                 Slot3_EmptyMagSound = Slot3SO.EmptyMagSound;
+                Slot3_CaseCartridge = Slot3SO.CaseCartridge;
+                Slot3_GunSpriteMirror = Slot3SO.GunSpriteMirror;
                 break;
             case 4:
                 Slot4_WeaponName = Slot4SO.WeaponName;
@@ -219,11 +241,13 @@ public class PlayerShooting : MonoBehaviour
                 Slot4_RecoilVelocity = Slot4SO.RecoilVelocity;
                 Slot4_Damage = Slot4SO.Damage;
                 Slot4_BulletHP = Slot4SO.BulletHP;
-                Slot4_Sprite = Slot4SO.Sprite;
+                Slot4_GunSprite = Slot4SO.GunSprite;
                 Slot4_ReloadingTime = Slot4SO.ReloadingTime;
                 Slot4_ShootingSound = Slot4SO.ShootingSound;
                 Slot4_ReloadingSound = Slot4SO.ReloadingSound;
                 Slot4_EmptyMagSound = Slot4SO.EmptyMagSound;
+                Slot4_CaseCartridge = Slot4SO.CaseCartridge;
+                Slot4_GunSpriteMirror = Slot4SO.GunSpriteMirror;
                 break;
         }
     }
@@ -242,14 +266,18 @@ public class PlayerShooting : MonoBehaviour
         DelayShoot = Slot1_DelayShoot;
         Damage = Slot1_Damage;
         BulletHP = Slot1_BulletHP;
-        GunSpriteRenderer.sprite = Slot1_Sprite;
+        GunSprite = Slot1_GunSprite;
+        GunSpriteRenderer.sprite = GunSprite;
         ReloadingTime = Slot1_ReloadingTime;
         ShootSound = Slot1_ShootingSound;
         ReloadingSound = Slot1_ReloadingSound;
         OutOfAmmoSound = Slot1_EmptyMagSound;
         WeaponPanel = Slot1_Panel;
-        GunBulletUIimageImage.sprite = Slot1_Sprite;
+        GunBulletUIimageImage.sprite = Slot1_GunSprite;
         AmmoText.text = Slot1_Ammo.ToString() + "/" + Slot1_TotalAmmo.ToString();
+        CaseCartridge = Slot1_CaseCartridge;
+        GunSpriteMirror = Slot1_GunSpriteMirror;
+
         Slot1_PanelImage.color = SelectedWeaponColor;
 
         Slot2_PanelImage.color = UnselectedWeaponColor;
@@ -269,14 +297,17 @@ public class PlayerShooting : MonoBehaviour
         DelayShoot = Slot2_DelayShoot;
         Damage = Slot2_Damage;
         BulletHP = Slot2_BulletHP;
-        GunSpriteRenderer.sprite = Slot2_Sprite;
+        GunSprite = Slot2_GunSprite;
+        GunSpriteRenderer.sprite = GunSprite;
         ReloadingTime = Slot2_ReloadingTime;
         ShootSound = Slot2_ShootingSound;
         ReloadingSound = Slot2_ReloadingSound;
         OutOfAmmoSound = Slot2_EmptyMagSound;
         WeaponPanel = Slot2_Panel;
-        GunBulletUIimageImage.sprite = Slot2_Sprite;
+        GunBulletUIimageImage.sprite = Slot2_GunSprite;
         AmmoText.text = Slot2_Ammo.ToString() + "/" + Slot2_TotalAmmo.ToString();
+        CaseCartridge = Slot2_CaseCartridge;
+        GunSpriteMirror = Slot2_GunSpriteMirror;
         Slot2_PanelImage.color = SelectedWeaponColor;
 
         Slot1_PanelImage.color = UnselectedWeaponColor;
@@ -296,14 +327,17 @@ public class PlayerShooting : MonoBehaviour
         DelayShoot = Slot3_DelayShoot;
         Damage = Slot3_Damage;
         BulletHP = Slot3_BulletHP;
-        GunSpriteRenderer.sprite = Slot3_Sprite;
+        GunSprite = Slot3_GunSprite;
+        GunSpriteRenderer.sprite = GunSprite;
         ReloadingTime = Slot3_ReloadingTime;
         ShootSound = Slot3_ShootingSound;
         ReloadingSound = Slot3_ReloadingSound;
         OutOfAmmoSound = Slot3_EmptyMagSound;
         WeaponPanel = Slot3_Panel;
-        GunBulletUIimageImage.sprite = Slot3_Sprite;
+        GunBulletUIimageImage.sprite = Slot3_GunSprite;
         AmmoText.text = Slot3_Ammo.ToString() + "/" + Slot3_TotalAmmo.ToString();
+        CaseCartridge = Slot3_CaseCartridge;
+        GunSpriteMirror = Slot3_GunSpriteMirror;
         Slot3_PanelImage.color = SelectedWeaponColor;
 
         Slot1_PanelImage.color = UnselectedWeaponColor;
@@ -323,14 +357,17 @@ public class PlayerShooting : MonoBehaviour
         DelayShoot = Slot4_DelayShoot;
         Damage = Slot4_Damage;
         BulletHP = Slot4_BulletHP;
-        GunSpriteRenderer.sprite = Slot4_Sprite;
+        GunSprite = Slot4_GunSprite;
+        GunSpriteRenderer.sprite = GunSprite;
         ReloadingTime = Slot4_ReloadingTime;
         ShootSound = Slot4_ShootingSound;
         ReloadingSound = Slot4_ReloadingSound;
         OutOfAmmoSound = Slot4_EmptyMagSound;
         WeaponPanel = Slot4_Panel;
-        GunBulletUIimageImage.sprite = Slot4_Sprite;
+        GunBulletUIimageImage.sprite = Slot4_GunSprite;
         AmmoText.text = Slot4_Ammo.ToString() + "/" + Slot4_TotalAmmo.ToString();
+        CaseCartridge = Slot4_CaseCartridge;
+        GunSpriteMirror = Slot4_GunSpriteMirror;
         Slot4_PanelImage.color = SelectedWeaponColor;
 
         Slot1_PanelImage.color = UnselectedWeaponColor;
@@ -377,7 +414,6 @@ public class PlayerShooting : MonoBehaviour
 
     public void ShootingBullet()
     {
-        Debug.Log("ShootingBullet");
         switch (usingWeapon)
         {
             case UsingWeapon.Slot1:
@@ -395,6 +431,7 @@ public class PlayerShooting : MonoBehaviour
                     AmmoText.text = Slot1_Ammo.ToString() + "/" + Slot1_TotalAmmo.ToString();
                     Recoil(Slot1_RecoilForce, Slot1_RecoilVelocity);
                     ShakeCamera();
+                    EjectCasesCartridges();
                 }
                 else
                 {
@@ -417,6 +454,7 @@ public class PlayerShooting : MonoBehaviour
                     AmmoText.text = Slot2_Ammo.ToString() + "/" + Slot2_TotalAmmo.ToString();
                     Recoil(Slot2_RecoilForce, Slot2_RecoilVelocity);
                     ShakeCamera();
+                    EjectCasesCartridges();
                 }
                 else
                 {
@@ -439,6 +477,7 @@ public class PlayerShooting : MonoBehaviour
                     AmmoText.text = Slot3_Ammo.ToString() + "/" + Slot3_TotalAmmo.ToString();
                     Recoil(Slot3_RecoilForce, Slot3_RecoilVelocity);
                     ShakeCamera();
+                    EjectCasesCartridges();
                 }
                 else
                 {
@@ -461,6 +500,7 @@ public class PlayerShooting : MonoBehaviour
                     AmmoText.text = Slot4_Ammo.ToString() + "/" + Slot4_TotalAmmo.ToString();
                     Recoil(Slot4_RecoilForce, Slot4_RecoilVelocity);
                     ShakeCamera();
+                    EjectCasesCartridges();
                 }
                 else
                 {
@@ -551,6 +591,30 @@ public class PlayerShooting : MonoBehaviour
         }
         Invoke("CancelRigidbody2DForces", RecoilCutOffTime);
     }
+
+    public void EjectCasesCartridges()
+    {
+        Vector3 ForceEjection3D = PlayerMovment.MouseDirection * -50;
+        Vector2 ForceEjection = new Vector2(ForceEjection3D.x, ForceEjection3D.y);
+        Vector2 RotatedForceEjection;
+        if (ForceEjection.x > 0)
+        {
+            RotatedForceEjection = new Vector2(-ForceEjection.y, ForceEjection.x);
+        }
+        else
+        {
+            RotatedForceEjection = new Vector2(ForceEjection.y, -ForceEjection.x);
+        }
+        float RandonXforce = UnityEngine.Random.Range(0f, 1f);
+        float RandonYforce = UnityEngine.Random.Range(0f, 1f);
+        Vector2 RandonForceEjection = new Vector2(RotatedForceEjection.x + RandonXforce, RotatedForceEjection.y - RandonYforce);
+        Vector2 InstanceLocation = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y + 0.5f);
+        GameObject InstantiatedCaseCartridge = Instantiate(CaseCartridge, InstanceLocation, Quaternion.identity);
+        InstantiatedCaseCartridge.GetComponent<Rigidbody2D>().velocity = RandonForceEjection;
+        InstantiatedCaseCartridge.GetComponent<Rigidbody2D>().DORotate(-720f, 4f);
+        
+    }
+
     public void Reload()
     {
 
@@ -615,7 +679,7 @@ public class PlayerShooting : MonoBehaviour
                         OnReloading = true;
                         gameObject.GetComponent<AudioSource>().clip = Slot1_ReloadingSound;
                         gameObject.GetComponent<AudioSource>().Play();
-                        Invoke("Ak47Reload", Slot1_ReloadingTime);
+                        Invoke("Reload", Slot1_ReloadingTime);
                     }
                     break;
                 case UsingWeapon.Slot2:
@@ -624,7 +688,7 @@ public class PlayerShooting : MonoBehaviour
                         OnReloading = true;
                         gameObject.GetComponent<AudioSource>().clip = Slot2_ReloadingSound;
                         gameObject.GetComponent<AudioSource>().Play();
-                        Invoke("Ak47Reload", Slot2_ReloadingTime);
+                        Invoke("Reload", Slot2_ReloadingTime);
                     }
                     break;
                 case UsingWeapon.Slot3:
@@ -633,7 +697,7 @@ public class PlayerShooting : MonoBehaviour
                         OnReloading = true;
                         gameObject.GetComponent<AudioSource>().clip = Slot3_ReloadingSound;
                         gameObject.GetComponent<AudioSource>().Play();
-                        Invoke("Ak47Reload", Slot3_ReloadingTime);
+                        Invoke("Reload", Slot3_ReloadingTime);
                     }
                     break;
                 case UsingWeapon.Slot4:
@@ -642,7 +706,7 @@ public class PlayerShooting : MonoBehaviour
                         OnReloading = true;
                         gameObject.GetComponent<AudioSource>().clip = Slot4_ReloadingSound;
                         gameObject.GetComponent<AudioSource>().Play();
-                        Invoke("Ak47Reload", Slot4_ReloadingTime);
+                        Invoke("Reload", Slot4_ReloadingTime);
                     }
                     break;
             }

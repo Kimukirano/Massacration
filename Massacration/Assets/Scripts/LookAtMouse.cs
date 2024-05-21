@@ -28,11 +28,11 @@ public class LookAtMouse : MonoBehaviour
 
             if (this.gameObject.transform.rotation.z > 0.77f || this.gameObject.transform.rotation.z < -0.67f)
             {
-                Sp.flipY = true;
+                Sp.sprite = PlayerShooting.GunSpriteMirror;
             }
             else
             {
-                Sp.flipY = false;
+                Sp.sprite = PlayerShooting.GunSprite;
             }
         }
 

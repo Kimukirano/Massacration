@@ -19,12 +19,14 @@ public class GUNSO : ScriptableObject
     [SerializeField] public float RecoilVelocity;
     [SerializeField] public int Damage;
     [SerializeField] public int BulletHP;
-    [SerializeField] public Sprite Sprite;
+    [SerializeField] public Sprite GunSprite;
     [SerializeField] public float ReloadingTime;
     [SerializeField] public AudioClip ShootingSound;
     [SerializeField] public AudioClip ReloadingSound;
     [SerializeField] public AudioClip EmptyMagSound;
     [SerializeField] public Sprite Image_Panel;
+    [SerializeField] public GameObject CaseCartridge;
+    [SerializeField] public Sprite GunSpriteMirror;
     // Start is called before the first frame update
     void Start()
     {
