@@ -1,3 +1,4 @@
+using BehaviorDesigner.Runtime.Tasks.Unity.UnityTransform;
 using DG.Tweening;
 using System;
 using System.Collections;
@@ -18,7 +19,6 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] float RecoilCutOffTime;
     [SerializeField] Transform Transformcamera;
-    [SerializeField] GameObject ShootLightPrefab;
     private GameObject Bullet;
     private float BulletSpeed;
     private int BulletLife;
@@ -36,6 +36,7 @@ public class PlayerShooting : MonoBehaviour
     private AudioClip ReloadingSound;
     private float DelayShoot;
     [SerializeField] GameObject Gun;
+    [SerializeField] Transform GunEffectSpawmPosition;
     private bool OnReloading = false;
     private SpriteRenderer GunSpriteRenderer;
     [SerializeField] GameObject WeaponPanel;
@@ -44,6 +45,7 @@ public class PlayerShooting : MonoBehaviour
     private GameObject CaseCartridge;
     public static Sprite GunSpriteMirror;
     public static Sprite GunSprite;
+    private GameObject ShootLightEffect;
     public enum RecoilMode
     {
         Force,
@@ -83,7 +85,8 @@ public class PlayerShooting : MonoBehaviour
     private GameObject Slot1_CaseCartridge;
     public static Sprite Slot1_GunSpriteMirror;
     public static Sprite Slot1_GunSprite;
-   [SerializeField] private GameObject Slot1_Panel;
+    private GameObject Slot1_ShootLightEffect;
+    [SerializeField] private GameObject Slot1_Panel;
     private Image Slot1_PanelImage;
 
     [Header("Slot2")]
@@ -99,7 +102,6 @@ public class PlayerShooting : MonoBehaviour
     private float Slot2_RecoilVelocity;
     private int Slot2_Damage;
     private int Slot2_BulletHP;
-    private Sprite Slot2_Sprite;
     private float Slot2_ReloadingTime;
     private AudioClip Slot2_ShootingSound;
     private AudioClip Slot2_ReloadingSound;
@@ -107,6 +109,7 @@ public class PlayerShooting : MonoBehaviour
     private GameObject Slot2_CaseCartridge;
     public static Sprite Slot2_GunSpriteMirror;
     public static Sprite Slot2_GunSprite;
+    private GameObject Slot2_ShootLightEffect;
     [SerializeField] private GameObject Slot2_Panel;
     private Image Slot2_PanelImage;
 
@@ -123,7 +126,6 @@ public class PlayerShooting : MonoBehaviour
     private float Slot3_RecoilVelocity;
     private int Slot3_Damage;
     private int Slot3_BulletHP;
-    private Sprite Slot3_Sprite;
     private float Slot3_ReloadingTime;
     private AudioClip Slot3_ShootingSound;
     private AudioClip Slot3_ReloadingSound;
@@ -131,6 +133,7 @@ public class PlayerShooting : MonoBehaviour
     private GameObject Slot3_CaseCartridge;
     public static Sprite Slot3_GunSpriteMirror;
     public static Sprite Slot3_GunSprite;
+    private GameObject Slot3_ShootLightEffect;
     [SerializeField] private GameObject Slot3_Panel;
     private Image Slot3_PanelImage;
 
@@ -147,7 +150,6 @@ public class PlayerShooting : MonoBehaviour
     private float Slot4_RecoilVelocity;
     private int Slot4_Damage;
     private int Slot4_BulletHP;
-    private Sprite Slot4_Sprite;
     private float Slot4_ReloadingTime;
     private AudioClip Slot4_ShootingSound;
     private AudioClip Slot4_ReloadingSound;
@@ -155,6 +157,7 @@ public class PlayerShooting : MonoBehaviour
     private GameObject Slot4_CaseCartridge;
     public static Sprite Slot4_GunSpriteMirror;
     public static Sprite Slot4_GunSprite;
+    private GameObject Slot4_ShootLightEffect;
     [SerializeField] private GameObject Slot4_Panel;
     private Image Slot4_PanelImage;
 
@@ -185,6 +188,7 @@ public class PlayerShooting : MonoBehaviour
                 Slot1_CaseCartridge = Slot1SO.CaseCartridge;
                 Slot1_GunSpriteMirror = Slot1SO.GunSpriteMirror;
                 Slot1_GunSprite = Slot1SO.GunSprite;
+                Slot1_ShootLightEffect = Slot1SO.ShootLightEffect;
                 break;
             case 2:
                 Slot2_WeaponName = Slot2SO.WeaponName;
@@ -206,6 +210,7 @@ public class PlayerShooting : MonoBehaviour
                 Slot2_EmptyMagSound = Slot2SO.EmptyMagSound;
                 Slot2_CaseCartridge = Slot2SO.CaseCartridge;
                 Slot2_GunSpriteMirror = Slot2SO.GunSpriteMirror;
+                Slot2_ShootLightEffect = Slot2SO.ShootLightEffect;
                 break;
             case 3:
                 Slot3_WeaponName = Slot3SO.WeaponName;
@@ -227,6 +232,7 @@ public class PlayerShooting : MonoBehaviour
                 Slot3_EmptyMagSound = Slot3SO.EmptyMagSound;
                 Slot3_CaseCartridge = Slot3SO.CaseCartridge;
                 Slot3_GunSpriteMirror = Slot3SO.GunSpriteMirror;
+                Slot3_ShootLightEffect = Slot3SO.ShootLightEffect;
                 break;
             case 4:
                 Slot4_WeaponName = Slot4SO.WeaponName;
@@ -248,6 +254,7 @@ public class PlayerShooting : MonoBehaviour
                 Slot4_EmptyMagSound = Slot4SO.EmptyMagSound;
                 Slot4_CaseCartridge = Slot4SO.CaseCartridge;
                 Slot4_GunSpriteMirror = Slot4SO.GunSpriteMirror;
+                Slot4_ShootLightEffect = Slot4SO.ShootLightEffect;
                 break;
         }
     }
@@ -277,7 +284,7 @@ public class PlayerShooting : MonoBehaviour
         AmmoText.text = Slot1_Ammo.ToString() + "/" + Slot1_TotalAmmo.ToString();
         CaseCartridge = Slot1_CaseCartridge;
         GunSpriteMirror = Slot1_GunSpriteMirror;
-
+        ShootLightEffect = Slot1_ShootLightEffect;
         Slot1_PanelImage.color = SelectedWeaponColor;
 
         Slot2_PanelImage.color = UnselectedWeaponColor;
@@ -308,6 +315,7 @@ public class PlayerShooting : MonoBehaviour
         AmmoText.text = Slot2_Ammo.ToString() + "/" + Slot2_TotalAmmo.ToString();
         CaseCartridge = Slot2_CaseCartridge;
         GunSpriteMirror = Slot2_GunSpriteMirror;
+        ShootLightEffect = Slot2_ShootLightEffect;
         Slot2_PanelImage.color = SelectedWeaponColor;
 
         Slot1_PanelImage.color = UnselectedWeaponColor;
@@ -338,6 +346,7 @@ public class PlayerShooting : MonoBehaviour
         AmmoText.text = Slot3_Ammo.ToString() + "/" + Slot3_TotalAmmo.ToString();
         CaseCartridge = Slot3_CaseCartridge;
         GunSpriteMirror = Slot3_GunSpriteMirror;
+        ShootLightEffect = Slot3_ShootLightEffect;
         Slot3_PanelImage.color = SelectedWeaponColor;
 
         Slot1_PanelImage.color = UnselectedWeaponColor;
@@ -368,6 +377,7 @@ public class PlayerShooting : MonoBehaviour
         AmmoText.text = Slot4_Ammo.ToString() + "/" + Slot4_TotalAmmo.ToString();
         CaseCartridge = Slot4_CaseCartridge;
         GunSpriteMirror = Slot4_GunSpriteMirror;
+        ShootLightEffect = Slot4_ShootLightEffect;
         Slot4_PanelImage.color = SelectedWeaponColor;
 
         Slot1_PanelImage.color = UnselectedWeaponColor;
@@ -422,11 +432,10 @@ public class PlayerShooting : MonoBehaviour
                     ShootingStarted = true;
                     gameObject.GetComponent<AudioSource>().clip = Slot1_ShootingSound;
                     gameObject.GetComponent<AudioSource>().Play();
-                    Vector3 BulletSpawmPosition = gameObject.transform.position;
-                    BulletSpawmPosition.y += 0.5f;
+                    Vector3 BulletSpawmPosition = GunEffectSpawmPosition.transform.position;
                     GameObject BulletAtual = Instantiate(Slot1_BulletPrefab, BulletSpawmPosition, Quaternion.identity);
                     BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * Slot1_BulletSpeed;
-                    Instantiate(ShootLightPrefab, BulletSpawmPosition, Quaternion.identity);
+                    ShootLightEfectFunction();
                     Slot1_Ammo--;
                     AmmoText.text = Slot1_Ammo.ToString() + "/" + Slot1_TotalAmmo.ToString();
                     Recoil(Slot1_RecoilForce, Slot1_RecoilVelocity);
@@ -449,7 +458,7 @@ public class PlayerShooting : MonoBehaviour
                     BulletSpawmPosition.y += 0.5f;
                     GameObject BulletAtual = Instantiate(Slot2_BulletPrefab, BulletSpawmPosition, Quaternion.identity);
                     BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * Slot2_BulletSpeed;
-                    Instantiate(ShootLightPrefab, BulletSpawmPosition, Quaternion.identity);
+                    ShootLightEfectFunction();
                     Slot2_Ammo--;
                     AmmoText.text = Slot2_Ammo.ToString() + "/" + Slot2_TotalAmmo.ToString();
                     Recoil(Slot2_RecoilForce, Slot2_RecoilVelocity);
@@ -472,7 +481,7 @@ public class PlayerShooting : MonoBehaviour
                     BulletSpawmPosition.y += 0.5f;
                     GameObject BulletAtual = Instantiate(Slot3_BulletPrefab, BulletSpawmPosition, Quaternion.identity);
                     BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * Slot3_BulletSpeed;
-                    Instantiate(ShootLightPrefab, BulletSpawmPosition, Quaternion.identity);
+                    ShootLightEfectFunction();
                     Slot3_Ammo--;
                     AmmoText.text = Slot3_Ammo.ToString() + "/" + Slot3_TotalAmmo.ToString();
                     Recoil(Slot3_RecoilForce, Slot3_RecoilVelocity);
@@ -495,7 +504,7 @@ public class PlayerShooting : MonoBehaviour
                     BulletSpawmPosition.y += 0.5f;
                     GameObject BulletAtual = Instantiate(Slot4_BulletPrefab, BulletSpawmPosition, Quaternion.identity);
                     BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * Slot4_BulletSpeed;
-                    Instantiate(ShootLightPrefab, BulletSpawmPosition, Quaternion.identity);
+                    ShootLightEfectFunction();
                     Slot4_Ammo--;
                     AmmoText.text = Slot4_Ammo.ToString() + "/" + Slot4_TotalAmmo.ToString();
                     Recoil(Slot4_RecoilForce, Slot4_RecoilVelocity);
@@ -613,6 +622,14 @@ public class PlayerShooting : MonoBehaviour
         InstantiatedCaseCartridge.GetComponent<Rigidbody2D>().velocity = RandonForceEjection;
         InstantiatedCaseCartridge.GetComponent<Rigidbody2D>().DORotate(-720f, 4f);
         
+    }
+    public void ShootLightEfectFunction()
+    {
+        Vector3 SpawmPosition = GunEffectSpawmPosition.transform.position;
+        Quaternion additionalRotation = Quaternion.Euler(0, 0, -100);
+        Quaternion newRotation = Gun.transform.rotation * additionalRotation;
+        GameObject InstantiatedShootLightEffect = Instantiate(ShootLightEffect, SpawmPosition, newRotation);
+        InstantiatedShootLightEffect.transform.SetParent(GunEffectSpawmPosition);
     }
 
     public void Reload()

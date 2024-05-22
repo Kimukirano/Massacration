@@ -27,6 +27,7 @@ public class GUNSO : ScriptableObject
     [SerializeField] public Sprite Image_Panel;
     [SerializeField] public GameObject CaseCartridge;
     [SerializeField] public Sprite GunSpriteMirror;
+    [SerializeField] public GameObject ShootLightEffect;
     // Start is called before the first frame update
     void Start()
     {

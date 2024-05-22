@@ -32,3 +32,4 @@ MonoBehaviour:
   Image_Panel: {fileID: 21300000, guid: 62dd7877e8c32d949877cdd927d16e3d, type: 3}
   CaseCartridge: {fileID: 2416068697512837347, guid: 0c430e217b378754eb1bb7ed7843f450, type: 3}
   GunSpriteMirror: {fileID: 21300000, guid: 89762196db874dc468fd5ecdb0fb43f2, type: 3}
+  ShootLightEffect: {fileID: 9188845699332557020, guid: 5bc54333551afc54db224df20c715855, type: 3}
