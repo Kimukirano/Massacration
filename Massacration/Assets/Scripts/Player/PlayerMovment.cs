@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,6 +12,10 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float AimMovSpeed;
     public static bool InAim = false;
     //so pra demonstração, trocar por animações: // GetComponent<Animator>().Play("AnimaçãoX");
+    [SerializeField] GameObject Legs;
+    [SerializeField] Animator LegsAnimator;
+    [SerializeField] GameObject Body;
+    [SerializeField] Animator BodyAnimator;
     [SerializeField] Sprite Up;
     [SerializeField] Sprite Down;
     [SerializeField] Sprite Left;
@@ -21,11 +26,24 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] Sprite DownLeft;
     private SpriteRenderer spriteRenderer;
     private Vector2 moviment;
-    private string Direction;
+    //private string Direction;
     public static Vector3 MouseDirection;
     public static GameObject Player;
     [SerializeField] GameObject Gun;
     private SpriteRenderer GunSp;
+
+    public enum Direction
+    {
+        Right,
+        UpRight,
+        Up,
+        UpLeft,
+        Left,
+        DownLeft,
+        Down,
+        DownRight,
+    }
+    public Direction direction;
     public void SetMoviment(InputAction.CallbackContext value)
     {
         moviment = value.ReadValue<Vector2>();
@@ -66,50 +84,65 @@ public class PlayerMovment : MonoBehaviour
 
         return MouseDirection;
     }
-    public String GetMouseAngle()
+    public void GetMouseAngle()
     {
         // Calcular o ângulo entre o vetor direção do mouse e o vetor para frente do objeto
         float angulo = Mathf.Atan2(GetMouseDirection().x, GetMouseDirection().y) * Mathf.Rad2Deg;
 
         if (angulo < 0){angulo += 360;}
 
-        if (angulo >= 340f)
+        if (angulo >= 340f || angulo <= 20f)
         {
-            Direction = "Up";
-        }
-        else if (angulo <= 20f)
-        {
-            Direction = "Up";
+            direction = Direction.Up;
         }
         else if (angulo >= 21f && angulo <= 69f)
         {
-            Direction = "RightUp";
+            direction = Direction.UpRight;
         }
         else if (angulo >= 70f && angulo <= 110f)
         {
-            Direction = "Right";
+            direction = Direction.Right;
         }
         else if (angulo >= 111f && angulo <= 159f)
         {
-            Direction = "DownRight";
+            direction = Direction.DownRight;
         }
         else if (angulo >= 160f && angulo <= 200f)
         {
-            Direction = "Down";
+            direction = Direction.Down;
         }
         else if (angulo >= 201f && angulo <= 249f)
         {
-            Direction = "DownLeft";
+            direction = Direction.DownLeft;
         }
         else if (angulo >= 250f && angulo <= 290f)
         {
-            Direction = "Left";
+            direction = Direction.Left;
         }
         else if (angulo >= 291f && angulo <= 339f)
         {
-            Direction = "LeftUp";
+            direction = Direction.UpLeft;
         }
-        return Direction;
+    }
+
+    public void LookAtMouse()
+    {
+        if (PauseGame.Paused == false)
+        {
+
+            Vector3 MousePosition = Input.mousePosition;
+
+            MousePosition = Camera.main.ScreenToWorldPoint(MousePosition);
+
+            Vector2 MouseDirection = new Vector2(MousePosition.x - transform.position.x, MousePosition.y - transform.position.y);
+
+            float angle = Mathf.Atan2(MouseDirection.y, MouseDirection.x) * Mathf.Rad2Deg;
+
+            Quaternion rotacao = Quaternion.AngleAxis(angle + 10, Vector3.forward);
+
+            Body.transform.rotation = rotacao;
+
+        }
     }
     public void Start()
     {
@@ -124,7 +157,7 @@ public class PlayerMovment : MonoBehaviour
     }
     public void Update()
     {
-        
+        LookAtMouse();
     }
     private void FixedUpdate()
     {
@@ -138,238 +171,45 @@ public class PlayerMovment : MonoBehaviour
 
         if (NewPosition == CurrentPosition)
         {
-            // GetComponent<Animator>().Play("Parado");
+            LegsAnimator.enabled = false;
         }
         else
         {
+            LegsAnimator.enabled = true;
             if (NewPosition.x > CurrentPosition.x)
             {
-                GunSp.sortingOrder = 2;
                 if(NewPosition.y == CurrentPosition.y)
                 {
-                    if(InAim==true)
-                    {
-                        switch (GetMouseAngle())
-                        {
-                            case "Up": 
-                                //Right walk looking UP
-                                return;
-                            case "RightUp":
-                                //Right walk looking UpRight
-                                return;
-                            case "Right":
-                                //Right walk looking Right
-                                return;
-                            case "DownRight":
-                                //Right walk looking DownRight
-                                return;
-                            case "Down":
-                                //Right walk looking Down
-                                return;
-                            case "DownLeft":
-                                //Right walk looking DownLeft
-                                return;
-                            case "Left":
-                                //Right walk looking Left
-                                return;
-                            case "UpLeft":
-                                //Right walk looking Up
-                                return;
-                        }
-                    }
-                    else
-                    {
-                        spriteRenderer.sprite = Right;
-                    }
+                    //Right
+                    Legs.transform.rotation = Quaternion.Euler(0 ,0 ,0 );
                 }
                 else if(NewPosition.y > CurrentPosition.y)
                 {
-                    if (InAim == true)
-                    {
-                        switch (GetMouseAngle())
-                        {
-                            case "Up":
-                                //UpRight walk looking UP
-                                return;
-                            case "RightUp":
-                                //UpRight walk looking UpRight
-                                return;
-                            case "Right":
-                                //UpRight walk looking Right
-                                return;
-                            case "DownRight":
-                                //UpRight walk looking DownRight
-                                return;
-                            case "Down":
-                                //UpRight walk looking Down
-                                return;
-                            case "DownLeft":
-                                //UpRight walk looking DownLeft
-                                return;
-                            case "Left":
-                                //UpRight walk looking Left
-                                return;
-                            case "UpLeft":
-                                //UpRight walk looking Up
-                                return;
-                        }
-                    }
-                    else
-                    {
-                        spriteRenderer.sprite = UpRight;
-                    }
+                    //UpRight
+                    Legs.transform.rotation = Quaternion.Euler(0, 0, 45);
                 }
                 else
                 {
-                    if (InAim == true)
-                    {
-                        switch (GetMouseAngle())
-                        {
-                            case "Up":
-                                //DownRight walk looking UP
-                                return;
-                            case "RightUp":
-                                //DownRight walk looking UpRight
-                                return;
-                            case "Right":
-                                //DownRight walk looking Right
-                                return;
-                            case "DownRight":
-                                //DownRight walk looking DownRight
-                                return;
-                            case "Down":
-                                //DownRight walk looking Down
-                                return;
-                            case "DownLeft":
-                                //DownRight walk looking DownLeft
-                                return;
-                            case "Left":
-                                //DownRight walk looking Left
-                                return;
-                            case "UpLeft":
-                                //DownRight walk looking Up
-                                return;
-                        }
-                    }
-                    else
-                    {
-                        spriteRenderer.sprite = DownRight;
-                    }
+                    //DownRight
+                    Legs.transform.rotation = Quaternion.Euler(0, 0, -45);
                 }
             }
             else if (NewPosition.x < CurrentPosition.x)
             {
-                GunSp.sortingOrder = 1;
                 if (NewPosition.y == CurrentPosition.y)
                 {
-                    if (InAim == true)
-                    {
-                        switch (GetMouseAngle())
-                        {
-                            case "Up":
-                                //Left walk looking UP
-                                return;
-                            case "RightUp":
-                                //Left walk looking UpRight
-                                return;
-                            case "Right":
-                                //Left walk looking Right
-                                return;
-                            case "DownRight":
-                                //Left walk looking DownRight
-                                return;
-                            case "Down":
-                                //Left walk looking Down
-                                return;
-                            case "DownLeft":
-                                //Left walk looking DownLeft
-                                return;
-                            case "Left":
-                                //Left walk looking Left
-                                return;
-                            case "UpLeft":
-                                //Left walk looking Up
-                                return;
-                        }
-                    }
-                    else
-                    {
-                        spriteRenderer.sprite = Left;
-                    }   
+                    //Left
+                    Legs.transform.rotation = Quaternion.Euler(0, 0, 180);
                 }
                 else if (NewPosition.y > CurrentPosition.y)
                 {
-                    if (InAim == true)
-                    {
-                        switch (GetMouseAngle())
-                        {
-                            case "Up":
-                                //UpLeft walk looking UP
-                                return;
-                            case "RightUp":
-                                //UpLeft walk looking UpRight
-                                return;
-                            case "Right":
-                                //UpLeft walk looking Right
-                                return;
-                            case "DownRight":
-                                //UpLeft walk looking DownRight
-                                return;
-                            case "Down":
-                                //UpLeft walk looking Down
-                                return;
-                            case "DownLeft":
-                                //UpLeft walk looking DownLeft
-                                return;
-                            case "Left":
-                                //UpLeft walk looking Left
-                                return;
-                            case "UpLeft":
-                                //UpLeft walk looking Up
-                                return;
-                        }
-                    }
-                    else
-                    {
-                        spriteRenderer.sprite = UpLeft;
-                    }
+                    //UpLeft
+                    Legs.transform.rotation = Quaternion.Euler(0, 0, 135);
                 }
                 else
                 {
-                    if (InAim == true)
-                    {
-                        switch (GetMouseAngle())
-                        {
-                            case "Up":
-                                //DownLeft walk looking UP
-                                return;
-                            case "RightUp":
-                                //DownLeft walk looking UpRight
-                                return;
-                            case "Right":
-                                //DownLeft walk looking Right
-                                return;
-                            case "DownRight":
-                                //DownLeft walk looking DownRight
-                                return;
-                            case "Down":
-                                //DownLeft walk looking Down
-                                return;
-                            case "DownLeft":
-                                //DownLeft walk looking DownLeft
-                                return;
-                            case "Left":
-                                //DownLeft walk looking Left
-                                return;
-                            case "UpLeft":
-                                //DownLeft walk looking Up
-                                return;
-                        }
-                    }
-                    else
-                    {
-                        spriteRenderer.sprite = DownLeft;
-                    }
+                    //DownLeft
+                    Legs.transform.rotation = Quaternion.Euler(0, 0, 225);
                 }
             }
             
@@ -377,79 +217,13 @@ public class PlayerMovment : MonoBehaviour
             {
                 if (NewPosition.y > CurrentPosition.y)
                 {
-                    GunSp.sortingOrder = 1;
-                    if (InAim == true)
-                    {
-                        switch (GetMouseAngle())
-                        {
-                            case "Up":
-                                //Up walk looking UP
-                                return;
-                            case "RightUp":
-                                //Up walk looking UpRight
-                                return;
-                            case "Right":
-                                //Up walk looking Right
-                                return;
-                            case "DownRight":
-                                //Up walk looking DownRight
-                                return;
-                            case "Down":
-                                //Up walk looking Down
-                                return;
-                            case "DownLeft":
-                                //Up walk looking DownLeft
-                                return;
-                            case "Left":
-                                //Up walk looking Left
-                                return;
-                            case "UpLeft":
-                                //Up walk looking Up
-                                return;
-                        }
-                    }
-                    else
-                    {
-                        spriteRenderer.sprite = Up;
-                    }
+                    //Up
+                    Legs.transform.rotation = Quaternion.Euler(0, 0, -90);
                 }
                 else
                 {
-                    GunSp.sortingOrder = 2;
-                    if (InAim == true)
-                    {
-                        switch (GetMouseAngle())
-                        {
-                            case "Up":
-                                //Down walk looking UP
-                                return;
-                            case "RightUp":
-                                //Down walk looking UpRight
-                                return;
-                            case "Right":
-                                //Down walk looking Right
-                                return;
-                            case "DownRight":
-                                //Down walk looking DownRight
-                                return;
-                            case "Down":
-                                //Down walk looking Down
-                                return;
-                            case "DownLeft":
-                                //Down walk looking DownLeft
-                                return;
-                            case "Left":
-                                //Down walk looking Left
-                                return;
-                            case "UpLeft":
-                                //Down walk looking Up
-                                return;
-                        }
-                    }
-                    else
-                    {
-                        spriteRenderer.sprite = Down;
-                    }
+                    //Down
+                    Legs.transform.rotation = Quaternion.Euler(0, 0, 90);
                 }
             }
         }

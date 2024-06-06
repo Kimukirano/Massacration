@@ -18,6 +18,10 @@ TagManager:
   - LockedDoor3
   - LockedDoor4
   - Enemy
+  - SecurityGuard
+  - EnemyBullet
+  - PoliceArriveSpot
+  - AvoidPlayerPointSpot
   layers:
   - Default
   - TransparentFX

@@ -37,6 +37,7 @@ public class PlayerShooting : MonoBehaviour
     private float DelayShoot;
     [SerializeField] GameObject Gun;
     [SerializeField] Transform GunEffectSpawmPosition;
+    [SerializeField] Transform SpawmCartridgesLocation;
     private bool OnReloading = false;
     private SpriteRenderer GunSpriteRenderer;
     [SerializeField] GameObject WeaponPanel;
@@ -617,7 +618,7 @@ public class PlayerShooting : MonoBehaviour
         float RandonXforce = UnityEngine.Random.Range(0f, 1f);
         float RandonYforce = UnityEngine.Random.Range(0f, 1f);
         Vector2 RandonForceEjection = new Vector2(RotatedForceEjection.x + RandonXforce, RotatedForceEjection.y - RandonYforce);
-        Vector2 InstanceLocation = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y + 0.5f);
+        Vector2 InstanceLocation = new Vector2(SpawmCartridgesLocation.transform.position.x , SpawmCartridgesLocation.transform.position.y);
         GameObject InstantiatedCaseCartridge = Instantiate(CaseCartridge, InstanceLocation, Quaternion.identity);
         InstantiatedCaseCartridge.GetComponent<Rigidbody2D>().velocity = RandonForceEjection;
         InstantiatedCaseCartridge.GetComponent<Rigidbody2D>().DORotate(-720f, 4f);

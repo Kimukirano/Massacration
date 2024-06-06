@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
+using System.Linq;
 using static PlayerStats;
+using Unity.VisualScripting;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -15,8 +18,10 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] GameObject BloodVFX;
     [SerializeField] Sprite CrawllerImage;
     [SerializeField] float CrawllerSpeed;
+    [SerializeField] float RunSpeed;
     [SerializeField] Sprite PretendDeadImage;
     [SerializeField] Sprite DeadImage;
+    [SerializeField] float AvoidDistancePoint;
     [SerializeField] int ScorePoints;
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider2D;
@@ -24,12 +29,17 @@ public class EnemyAI : MonoBehaviour
     private GameObject Player;
     List<GameObject> HideSpots;
     List<GameObject> LockedRoomHideSpots;
+    [SerializeField] float MinimalDistance;
+    private GameObject[] EvadePoints;
+    private Transform EvadeDestination;
     [SerializeField] public int AtackDamage;
     [Range(0f, 2f)] public float FirstAtackDelay;
     [Range(0f, 2f)] public float AtackCooldown;
     public delegate void LooseHPdelegate(int dmg);
     public static event LooseHPdelegate looseHPdelegate;
     public PlayerStats playerStats;
+    private Vector2 transformReference;
+    private Animator DummieAnimator;
     [Header("Door")]
     private GameObject Door;
     [Range(0f, 1f)] public float RotationTotalTime;
@@ -53,6 +63,7 @@ public class EnemyAI : MonoBehaviour
         Idle,
         AtackPlayer,
         EscapeToExit,
+        AvoidPlayer,
         BegToLive,
         LockingRoom,
         Hiding,
@@ -113,7 +124,7 @@ public class EnemyAI : MonoBehaviour
                 int N = Random.Range(1, 10);
                 if (N > 2)
                 {
-                    RunToExit();
+                    state = State.AvoidPlayer;
                 }
                 else
                 {
@@ -128,10 +139,10 @@ public class EnemyAI : MonoBehaviour
             }
             else if(idleLocation == IdleLocation.Room1 || idleLocation == IdleLocation.Room2 || idleLocation == IdleLocation.Room3 || idleLocation == IdleLocation.Room4)
             {
-                int N = Random.Range(1,2);
+                int N = Random.Range(1,3);
                 if(N == 1)
                 {
-                    RunToExit();
+                    state = State.AvoidPlayer;
                 }
                 else
                 {
@@ -219,15 +230,54 @@ public class EnemyAI : MonoBehaviour
             Paralized();
         }
     }
+    
+    public void AvoidPlayer()
+    {
+        if (Vector3.Distance(transform.position, Player.transform.position) < MinimalDistance)
+        {
+            AvoidPlayerPointsDirection();
+        }
+        else
+        {
+            AvoidPlayerOpostDirection();
+        }
+    }
+    public void AvoidPlayerOpostDirection()
+    {
+        Vector3 AvoidDirection = transform.position - Player.transform.position;
+        AvoidDirection.Normalize();
+        Vector3 EscapeDirection = transform.position + AvoidDirection * AvoidDistancePoint;
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(EscapeDirection, out hit, AvoidDistancePoint, NavMesh.AllAreas))
+        {
+            agent.SetDestination(hit.position);
+        }
+    }
+
+    public void AvoidPlayerPointsDirection()
+    {
+        var distances = EvadePoints.Select(point => new
+        {
+            Point = point.transform,
+            Distance = Vector3.Distance(point.transform.position, Player.transform.position)
+        }).OrderByDescending(p => p.Distance).ToArray();
+
+        EvadeDestination = distances[0].Point;
+
+        agent.SetDestination(EvadeDestination.position);
+    }
+
     public void Paralized()
     {
         agent.isStopped = true;
+        DummieAnimator.enabled = false;
         Debug.Log("...");
         state = State.Paralized;
     }
     public void Death()
     {
         agent.isStopped = true;
+        DummieAnimator.enabled = false;
         spriteRenderer.sprite = DeadImage;
         boxCollider2D.enabled = false;
         state = State.Death;
@@ -290,6 +340,7 @@ public class EnemyAI : MonoBehaviour
         Player = GameObject.FindWithTag("Player");
         state = State.Idle;
         agent = GetComponent<NavMeshAgent>();
+        agent.speed = RunSpeed;
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         playerStats = FindObjectOfType<PlayerStats>();
@@ -301,6 +352,7 @@ public class EnemyAI : MonoBehaviour
         {
             HideSpots.Add(objet);
         }
+
         LockedRoomHideSpots = new List<GameObject>();
         GameObject[] Lockedobjets = GameObject.FindGameObjectsWithTag("LockedRoomHidingSpot");
         foreach (GameObject Lockedobjet in Lockedobjets)
@@ -308,6 +360,10 @@ public class EnemyAI : MonoBehaviour
             LockedRoomHideSpots.Add(Lockedobjet);
         }
 
+        EvadePoints = GameObject.FindGameObjectsWithTag("AvoidPlayerPointSpot");
+        
+        transformReference = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+        DummieAnimator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -322,5 +378,64 @@ public class EnemyAI : MonoBehaviour
         {
             agent.SetDestination(Player.transform.position);
         }
+        if(state == State.AvoidPlayer)
+        {
+            AvoidPlayer();
+        }
+        if(state == State.Death)
+        {
+            spriteRenderer.sprite = DeadImage;
+        }
+        else
+        {
+            if (gameObject.transform.position.x != transformReference.x || gameObject.transform.position.y != transformReference.y)
+            {
+                DummieAnimator.enabled = true;
+                if (gameObject.transform.position.x > transformReference.x)
+                {
+                    if (gameObject.transform.position.y == transformReference.y)
+                    {
+                        //right
+                        gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    }
+                    else if (gameObject.transform.position.y > transformReference.y)
+                    {
+                        //UpRight
+                        gameObject.transform.rotation = Quaternion.Euler(0, 0, 45);
+                    }
+                    else
+                    {
+                        //DownRight
+                        gameObject.transform.rotation = Quaternion.Euler(0, 0, -45);
+                    }
+                }
+                if (gameObject.transform.position.x < transformReference.x)
+                {
+                    if (gameObject.transform.position.y == transformReference.y)
+                    {
+                        //left
+                        gameObject.transform.rotation = Quaternion.Euler(0, 0, 180);
+                    }
+                    else if (gameObject.transform.position.y > transformReference.y)
+                    {
+                        //UpLeft
+                        gameObject.transform.rotation = Quaternion.Euler(0, 0, 135);
+                    }
+                    else
+                    {
+                        //DownLeft
+                        gameObject.transform.rotation = Quaternion.Euler(0, 0, 225);
+                    }
+                }
+            }
+            else
+            {
+                DummieAnimator.enabled = false;
+            }
+        }
+        
+
+        transformReference = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+
     }
 }

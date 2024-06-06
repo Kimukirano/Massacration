@@ -1,0 +1,3150 @@
+fileFormatVersion: 2
+guid: 87bc72c585371dc438b3edf245cba63d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 17
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_0
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 533
+        width: 33
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea3caa83dc74584d8a296383eb33504
+      internalID: 123345272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_1
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 533
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbdf509d2475f3a4c9518b9c19ed568c
+      internalID: 1204318012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_2
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 533
+        width: 33
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b6b9c2c1db54d40b2296aa97969f8c
+      internalID: 2097448331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_3
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 533
+        width: 34
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc39991ac6f85e0479acfa008183eedd
+      internalID: 586680380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_4
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 533
+        width: 38
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32dc6261b469fea44a84ffb680453392
+      internalID: -1677324848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_5
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 531
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45c2da9194b2af41827a5f3d0ec56ca
+      internalID: -2030344525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_6
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 531
+        width: 39
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6bf7b20edcfbf43805f80ec8aa9c0d
+      internalID: 1559378957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_7
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 531
+        width: 40
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac774b3d183ad3e428c4d569e6cb2b3f
+      internalID: 545847375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_8
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 531
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12064a5581edfe4db0db5e7a3a155b2
+      internalID: -653671463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_9
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 569
+        width: 34
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efcb03c2964d8e54096595fbdb3e690b
+      internalID: -101044470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_10
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 568
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49014b351832ede43af1bc27291aed02
+      internalID: -2111068056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_11
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 569
+        width: 36
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49424a20eb85fa4789149cf668aac4c
+      internalID: -2093003674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_12
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 569
+        width: 35
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6584cb4ccf110c445836953c8124c7c3
+      internalID: -2033222101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_13
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 569
+        width: 34
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec460272d47563543963a0670ddfa3e3
+      internalID: 1233170220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_14
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 567
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db28c97909b75048a6acf9adc4dcf2d
+      internalID: -1631860754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_15
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 567
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2515985d8c43a1e42a505090e4c0c17d
+      internalID: -1452549706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_16
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 567
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a61ed8205ec6d4429b7ae07f8726e39
+      internalID: -824277384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_17
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 567
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e568488ed0b4674db6661ca6e69c447
+      internalID: -2094015676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_18
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 562
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f9c1429550d5f45a17eb1fc84c632a
+      internalID: -547195754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_19
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 563
+        width: 49
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7639523a34e1a14d901cd221f81feb8
+      internalID: -1243330186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_20
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 597
+        width: 50
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d1deb64ec98e148b620de5bebbe5aa
+      internalID: -1331115608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_21
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 593
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe04604378c2744ab50b1ed80d3c5e6
+      internalID: 897903088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_22
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 597
+        width: 36
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b72be31ea174ef43b883083ed60e2d6
+      internalID: -959985353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_23
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 598
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88cfe3d28089f1c4189389aff7252734
+      internalID: 1921973906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_24
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 597
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fdcddd9edb2a54faa86f9ff6610e18
+      internalID: 322456194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_25
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 597
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981d48167b691db4aabe499d66790bb7
+      internalID: 913366742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_26
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 600
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1c44cce328a9d479a9aad329337dce
+      internalID: -248043599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_27
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 600
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedc1d8b3e926b44abf093ae40f03373
+      internalID: 1623813116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_28
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 600
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52a2553f8f58f841bac10d25c104294
+      internalID: -547763450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_29
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 600
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de9aa28fdddf634f8345f96ea495edb
+      internalID: 2015564671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_30
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 605
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86151ce451602b04cbec36f3e0c90282
+      internalID: -1967808433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_31
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 559
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32363cbd02fc324c8d1eee7d60a1f0d
+      internalID: 1434999523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_32
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 535
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471c51eb0b3d084438d76529854f5b0a
+      internalID: -1076175677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_33
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 515
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66db6cc4bb331d48bfccd79d2ee3541
+      internalID: -1163415168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_34
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 470
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d182cc6621c53404ea20eb446ce18934
+      internalID: 2063103883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_35
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 474
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1af4b722a4d6340a0b290ff3c30ee9
+      internalID: 46902409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_36
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 490
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bed1d269c020384997596d2c8a10723
+      internalID: -1194865046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_37
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 457
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe20d719b71e7a4e9c333aea251f83b
+      internalID: 939602001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_38
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 424
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9412f45f50a7a41b728a9a76c43775
+      internalID: 1762232135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_39
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 391
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2bc8faa5024754f80c54f0f4f76dbd
+      internalID: -1288606010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_40
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 358
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ddadd9d5f428c7429c34a6d8c29947b
+      internalID: -1018700233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_41
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 325
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5bb5a81df1f5b42a7cc7518fbe1a43
+      internalID: 1947351484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_42
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 292
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: babf58105f54d504e97a72fde1bc9918
+      internalID: -309342718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_43
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 259
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699998f17eac0f94483c1baca23977c1
+      internalID: -96864505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_44
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 226
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33423333b25678740b70077e1dd3f676
+      internalID: 1886134877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_45
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 400
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9a130b0cf3c6945afa7deca1bfc9fe
+      internalID: 62633928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_46
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 339
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26872224adc39e144949cd79936ab57f
+      internalID: -714376547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_47
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 278
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73223abbd72a8a244b08a4f3ba44e245
+      internalID: 1196637993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_48
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 217
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3524654e1dc2865489a7b5ba4412043d
+      internalID: -582194822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_49
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 156
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56cb64ed2b216742ba47fe22c835286
+      internalID: -1214361477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_50
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 95
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9a727f300126f49ab0f4ce247ffe7f
+      internalID: 1997776874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_51
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 34
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1945a6b2b3f096e4cbe66beb8ba2bb22
+      internalID: -366682542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_52
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 7
+        width: 48
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0e01606bcf0ca40849155fc0176241
+      internalID: 1671258247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_53
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 46
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39d530be7ab4ab4abee81cf10e5dbab
+      internalID: 245067850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_54
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 93
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8015507eff0896d4d92c26d49ebb32af
+      internalID: -663189289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_55
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 5
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cec466a331a424fbdebdea6103d592
+      internalID: -1928726293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_56
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 182
+        width: 56
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d287678ab12de47a99fec2d7cd8e4d
+      internalID: -1033596663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_57
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 138
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3218986653bfa418771ebc44e70cab
+      internalID: 925580732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_58
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 182
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26cb76c8d1b3af4282c60177e227476
+      internalID: 992799250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_59
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 230
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f440215fa6f5a4aa5313ef247cdf2d
+      internalID: -1233000052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_60
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 275
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71aaa255f2e7c644b0bb84715cdd8c4
+      internalID: 1836560355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_61
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 320
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b450ccebbf58af4889ad36c84b3cae7
+      internalID: -1221995335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_62
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 365
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b25954a253682498634aa9b0860e9c
+      internalID: 1620842102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_63
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 410
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d770da4c9b1ab145b501452ed05a1cf
+      internalID: -1381866371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_64
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 455
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60756e31a6adba45a520e0bb89f39f0
+      internalID: -1887707592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_65
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 500
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267ae897fc3e46b4f9135e4744fb8a8c
+      internalID: -621278062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_66
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 545
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a851ba38ab822384a957aeed603be520
+      internalID: -1887383844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_67
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 590
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd31af6fe595dbd499132ba7e0c71508
+      internalID: 1520422073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_68
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 597
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9d29a10d98ed14293c436786f818d5
+      internalID: -1547490794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_69
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 521
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a9e45ae01eb3f4b8fae9b0164b07ff
+      internalID: 90933012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_70
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 482
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12cbb97255ac9a2449ac5c35a8cb55d1
+      internalID: 640187030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_71
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 456
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f912840e2f365c4cb63ad24d812cf07
+      internalID: 1455226818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_72
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 424
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d23ae4259055841a77dfde16a56391
+      internalID: -508393569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_73
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 414
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723686050967f194cbebabfa39f8b347
+      internalID: 1229685156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_74
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 381
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24216462b090264787c56d5191748c1
+      internalID: 1371982060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_75
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 348
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e2b402b201270428254313f2ceb6fb
+      internalID: 616699325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_76
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 314
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7ce44fc1074b74c96f6fd8369e9242
+      internalID: -258196511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_77
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 282
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a463d2599bf8174ba04e3d30d9f63ed
+      internalID: 1807881134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_78
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 249
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df909b7ba35002142b5fab4c34c57c69
+      internalID: 1469749874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_79
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 216
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929558944448f534ab3ec922d5fb95c4
+      internalID: -936934746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_80
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 150
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5069752d58ecf43842e68c769440ba
+      internalID: 2075652791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_81
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 116
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1614745acffae8047ac6fd182c88194c
+      internalID: -131512848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_82
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 83
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953c81e967bad1a469bab1bb5cfbe240
+      internalID: -542281336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_83
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 51
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca62dd60e2c8698478dd6669ed052ffd
+      internalID: -1885266345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_84
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 17
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff9ed894606dd6f42bb944231bafecae
+      internalID: 1619004630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_85
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 386
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00a7f9fa4c1f2c48ab94c55247e0216
+      internalID: -558215236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_86
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 353
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0fd5b60c3541404e9c4eb67a0b79660
+      internalID: -1880142263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_87
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 321
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22452c755b7c2c14b95cb64e89fb629f
+      internalID: -2017022368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_88
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 287
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 739a6f35d9e6b4442a43036c0fac77de
+      internalID: 1594934716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_89
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 254
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ac36eb20edfa842acad00cdc904249
+      internalID: 128560001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_90
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 221
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ab70bae5a589442ac97a511f6ba0ec
+      internalID: -2082415133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_91
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 189
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5291372031ac18343bf7236dc7bebb0b
+      internalID: -2053275175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_92
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 155
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da742bb887be71849a633f1ba7aa39f5
+      internalID: 1016984894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_93
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 122
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216b5ff282926dd42bd28a2a5a4a241c
+      internalID: 490470125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_94
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 89
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ef9aba33b08124b92da010d09c59ee
+      internalID: 375277605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_95
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 56
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d49f4b21bf3609044b8ce59caa5e65d2
+      internalID: 1622029548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_96
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 23
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17aed2103b74e7b42ad1133447132356
+      internalID: -1283141136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_97
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 24
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf59ff9de42bc03458e84c0be1f35967
+      internalID: -1669416179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_98
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 57
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989ed273e3d69ec40a7428f730ba3a59
+      internalID: 731283104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_99
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 90
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0314985549f24354f8ff4c2e8086d7e9
+      internalID: -2119671849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_100
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 123
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a1d5301b5d6b547b2f2d913db932a1
+      internalID: -737839519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_101
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 155
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48fbab9f9dcb6884797598e1028a684c
+      internalID: -1058523098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_102
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 188
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956e8645d3a59644eadcf05ff05b68df
+      internalID: -1566729487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_103
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 189
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec2ac8fdb4236f47bfd1b12a6b4bf74
+      internalID: 57757270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_104
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 189
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698c28f13201ad743848ba629538992d
+      internalID: 1902123147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_105
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 156
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcab5509453c9fd4d9bfb8e679aea078
+      internalID: -1299008477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_106
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 156
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71c1566c4416e6478a832b01f613a1e
+      internalID: 210752796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_107
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 123
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae2403b64178d941a9952e8b3305d05
+      internalID: -1267813330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_108
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 123
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1dd2bd8ec8ffa14db0536931464152d
+      internalID: -849126886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_109
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 90
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c676c9ba14035429d41ff471d53ee7
+      internalID: 61050114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_110
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 90
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1781dd624f9a8d24096ba94ca1304a64
+      internalID: 834575227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_111
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 57
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde7d523baeb3c740817c3f5dc90b74a
+      internalID: -1971318353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_112
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 57
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1b486a56fd6984193e7bdff6aaa53c
+      internalID: 2020058390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_113
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 24
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d845d11d227c6c48a0acc8d2a9df7a3
+      internalID: -155146406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_114
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 23
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc4ac6ae450f4f46b07ad0946c6c968
+      internalID: 1701035613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_115
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 599
+        width: 43
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76898adb37ce9ba43b20fabed2aec6e5
+      internalID: 460444018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_116
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 667
+        width: 58
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91c4cfa8790db747b7c85b169b7df0e
+      internalID: 1055378634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_117
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 661
+        width: 50
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52acd0646eda8c04bb74d29b261e80ef
+      internalID: -1814511102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_118
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 462
+        width: 49
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0e2f219273c9940b477c19649cb4ce
+      internalID: 2147032853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_119
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 62
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af40d6cbc238cd40a4524651c02492d
+      internalID: -1620587208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_120
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 787
+        width: 51
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ca4d4c940ec8249923b8193d88c01c
+      internalID: 501907536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_121
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 848
+        width: 54
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a2d3a50c50fb148b15241242c6d77a
+      internalID: 1403296731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_122
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 848
+        width: 55
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5044c7c4b2a350e40bc70b9fdb158340
+      internalID: -1155883113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_123
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 849
+        width: 58
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf723e9a596bb646a83e2faa6e54eb7
+      internalID: -529601604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_124
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 849
+        width: 54
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb6fbee207de5646ab98ab9f4dd2bd4
+      internalID: -1067525380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_125
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 849
+        width: 54
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ccbf07024ec8324286cbaf36b3b2013
+      internalID: 1404107159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_126
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 794
+        width: 53
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212bcb132dbc1644f82d5aedf0cbbc8c
+      internalID: 1791856868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_127
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 797
+        width: 59
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0605b4b81b1d57c47a7e2280c8d2e1ed
+      internalID: 732783486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_128
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 799
+        width: 62
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e0650f27eac4646b6e0170501212bb
+      internalID: -456272827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_129
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 799
+        width: 61
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb38e97844f0d84d982fddde84ee78b
+      internalID: 262698963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_130
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 799
+        width: 61
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558e4df6d05151a41bf457754a5149e8
+      internalID: 28844765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_131
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 799
+        width: 61
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e095b25f5ada5d844a278a90c71a85dc
+      internalID: -25446325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_132
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 797
+        width: 58
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e5333d0a0a825419bdbed263a567db
+      internalID: -1493551195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_133
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 794
+        width: 54
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb392a2473e37f542806e6fccbc9e0ea
+      internalID: -1874513169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_134
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 794
+        width: 57
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0821854390eec1e4382d7964933fe3f6
+      internalID: -1849371065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_135
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 794
+        width: 62
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a375811459e004aba2354942239cd8
+      internalID: 1725054109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_136
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 794
+        width: 61
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bb29cfed5842840ae147224e7a7d52
+      internalID: -779124263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1404594863_preview_Enemy_Police_137
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 762
+        width: 46
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4902090445654c42a969f06f112aee9
+      internalID: 995101306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      1404594863_preview_Enemy_Police_0: 123345272
+      1404594863_preview_Enemy_Police_1: 1204318012
+      1404594863_preview_Enemy_Police_10: -2111068056
+      1404594863_preview_Enemy_Police_100: -737839519
+      1404594863_preview_Enemy_Police_101: -1058523098
+      1404594863_preview_Enemy_Police_102: -1566729487
+      1404594863_preview_Enemy_Police_103: 57757270
+      1404594863_preview_Enemy_Police_104: 1902123147
+      1404594863_preview_Enemy_Police_105: -1299008477
+      1404594863_preview_Enemy_Police_106: 210752796
+      1404594863_preview_Enemy_Police_107: -1267813330
+      1404594863_preview_Enemy_Police_108: -849126886
+      1404594863_preview_Enemy_Police_109: 61050114
+      1404594863_preview_Enemy_Police_11: -2093003674
+      1404594863_preview_Enemy_Police_110: 834575227
+      1404594863_preview_Enemy_Police_111: -1971318353
+      1404594863_preview_Enemy_Police_112: 2020058390
+      1404594863_preview_Enemy_Police_113: -155146406
+      1404594863_preview_Enemy_Police_114: 1701035613
+      1404594863_preview_Enemy_Police_115: 460444018
+      1404594863_preview_Enemy_Police_116: 1055378634
+      1404594863_preview_Enemy_Police_117: -1814511102
+      1404594863_preview_Enemy_Police_118: 2147032853
+      1404594863_preview_Enemy_Police_119: -1620587208
+      1404594863_preview_Enemy_Police_12: -2033222101
+      1404594863_preview_Enemy_Police_120: 501907536
+      1404594863_preview_Enemy_Police_121: 1403296731
+      1404594863_preview_Enemy_Police_122: -1155883113
+      1404594863_preview_Enemy_Police_123: -529601604
+      1404594863_preview_Enemy_Police_124: -1067525380
+      1404594863_preview_Enemy_Police_125: 1404107159
+      1404594863_preview_Enemy_Police_126: 1791856868
+      1404594863_preview_Enemy_Police_127: 732783486
+      1404594863_preview_Enemy_Police_128: -456272827
+      1404594863_preview_Enemy_Police_129: 262698963
+      1404594863_preview_Enemy_Police_13: 1233170220
+      1404594863_preview_Enemy_Police_130: 28844765
+      1404594863_preview_Enemy_Police_131: -25446325
+      1404594863_preview_Enemy_Police_132: -1493551195
+      1404594863_preview_Enemy_Police_133: -1874513169
+      1404594863_preview_Enemy_Police_134: -1849371065
+      1404594863_preview_Enemy_Police_135: 1725054109
+      1404594863_preview_Enemy_Police_136: -779124263
+      1404594863_preview_Enemy_Police_137: 995101306
+      1404594863_preview_Enemy_Police_14: -1631860754
+      1404594863_preview_Enemy_Police_15: -1452549706
+      1404594863_preview_Enemy_Police_16: -824277384
+      1404594863_preview_Enemy_Police_17: -2094015676
+      1404594863_preview_Enemy_Police_18: -547195754
+      1404594863_preview_Enemy_Police_19: -1243330186
+      1404594863_preview_Enemy_Police_2: 2097448331
+      1404594863_preview_Enemy_Police_20: -1331115608
+      1404594863_preview_Enemy_Police_21: 897903088
+      1404594863_preview_Enemy_Police_22: -959985353
+      1404594863_preview_Enemy_Police_23: 1921973906
+      1404594863_preview_Enemy_Police_24: 322456194
+      1404594863_preview_Enemy_Police_25: 913366742
+      1404594863_preview_Enemy_Police_26: -248043599
+      1404594863_preview_Enemy_Police_27: 1623813116
+      1404594863_preview_Enemy_Police_28: -547763450
+      1404594863_preview_Enemy_Police_29: 2015564671
+      1404594863_preview_Enemy_Police_3: 586680380
+      1404594863_preview_Enemy_Police_30: -1967808433
+      1404594863_preview_Enemy_Police_31: 1434999523
+      1404594863_preview_Enemy_Police_32: -1076175677
+      1404594863_preview_Enemy_Police_33: -1163415168
+      1404594863_preview_Enemy_Police_34: 2063103883
+      1404594863_preview_Enemy_Police_35: 46902409
+      1404594863_preview_Enemy_Police_36: -1194865046
+      1404594863_preview_Enemy_Police_37: 939602001
+      1404594863_preview_Enemy_Police_38: 1762232135
+      1404594863_preview_Enemy_Police_39: -1288606010
+      1404594863_preview_Enemy_Police_4: -1677324848
+      1404594863_preview_Enemy_Police_40: -1018700233
+      1404594863_preview_Enemy_Police_41: 1947351484
+      1404594863_preview_Enemy_Police_42: -309342718
+      1404594863_preview_Enemy_Police_43: -96864505
+      1404594863_preview_Enemy_Police_44: 1886134877
+      1404594863_preview_Enemy_Police_45: 62633928
+      1404594863_preview_Enemy_Police_46: -714376547
+      1404594863_preview_Enemy_Police_47: 1196637993
+      1404594863_preview_Enemy_Police_48: -582194822
+      1404594863_preview_Enemy_Police_49: -1214361477
+      1404594863_preview_Enemy_Police_5: -2030344525
+      1404594863_preview_Enemy_Police_50: 1997776874
+      1404594863_preview_Enemy_Police_51: -366682542
+      1404594863_preview_Enemy_Police_52: 1671258247
+      1404594863_preview_Enemy_Police_53: 245067850
+      1404594863_preview_Enemy_Police_54: -663189289
+      1404594863_preview_Enemy_Police_55: -1928726293
+      1404594863_preview_Enemy_Police_56: -1033596663
+      1404594863_preview_Enemy_Police_57: 925580732
+      1404594863_preview_Enemy_Police_58: 992799250
+      1404594863_preview_Enemy_Police_59: -1233000052
+      1404594863_preview_Enemy_Police_6: 1559378957
+      1404594863_preview_Enemy_Police_60: 1836560355
+      1404594863_preview_Enemy_Police_61: -1221995335
+      1404594863_preview_Enemy_Police_62: 1620842102
+      1404594863_preview_Enemy_Police_63: -1381866371
+      1404594863_preview_Enemy_Police_64: -1887707592
+      1404594863_preview_Enemy_Police_65: -621278062
+      1404594863_preview_Enemy_Police_66: -1887383844
+      1404594863_preview_Enemy_Police_67: 1520422073
+      1404594863_preview_Enemy_Police_68: -1547490794
+      1404594863_preview_Enemy_Police_69: 90933012
+      1404594863_preview_Enemy_Police_7: 545847375
+      1404594863_preview_Enemy_Police_70: 640187030
+      1404594863_preview_Enemy_Police_71: 1455226818
+      1404594863_preview_Enemy_Police_72: -508393569
+      1404594863_preview_Enemy_Police_73: 1229685156
+      1404594863_preview_Enemy_Police_74: 1371982060
+      1404594863_preview_Enemy_Police_75: 616699325
+      1404594863_preview_Enemy_Police_76: -258196511
+      1404594863_preview_Enemy_Police_77: 1807881134
+      1404594863_preview_Enemy_Police_78: 1469749874
+      1404594863_preview_Enemy_Police_79: -936934746
+      1404594863_preview_Enemy_Police_8: -653671463
+      1404594863_preview_Enemy_Police_80: 2075652791
+      1404594863_preview_Enemy_Police_81: -131512848
+      1404594863_preview_Enemy_Police_82: -542281336
+      1404594863_preview_Enemy_Police_83: -1885266345
+      1404594863_preview_Enemy_Police_84: 1619004630
+      1404594863_preview_Enemy_Police_85: -558215236
+      1404594863_preview_Enemy_Police_86: -1880142263
+      1404594863_preview_Enemy_Police_87: -2017022368
+      1404594863_preview_Enemy_Police_88: 1594934716
+      1404594863_preview_Enemy_Police_89: 128560001
+      1404594863_preview_Enemy_Police_9: -101044470
+      1404594863_preview_Enemy_Police_90: -2082415133
+      1404594863_preview_Enemy_Police_91: -2053275175
+      1404594863_preview_Enemy_Police_92: 1016984894
+      1404594863_preview_Enemy_Police_93: 490470125
+      1404594863_preview_Enemy_Police_94: 375277605
+      1404594863_preview_Enemy_Police_95: 1622029548
+      1404594863_preview_Enemy_Police_96: -1283141136
+      1404594863_preview_Enemy_Police_97: -1669416179
+      1404594863_preview_Enemy_Police_98: 731283104
+      1404594863_preview_Enemy_Police_99: -2119671849
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

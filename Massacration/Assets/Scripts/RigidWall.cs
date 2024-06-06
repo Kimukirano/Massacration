@@ -10,6 +10,11 @@ public class RigidWall : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+        if (other.gameObject.CompareTag("EnemyBullet"))
+        {
+            Destroy(other.gameObject);
+        }
+
     }
     // Start is called before the first frame update
     void Start()
