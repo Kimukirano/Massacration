@@ -47,6 +47,8 @@ public class PlayerShooting : MonoBehaviour
     public static Sprite GunSpriteMirror;
     public static Sprite GunSprite;
     private GameObject ShootLightEffect;
+
+
     public enum RecoilMode
     {
         Force,
@@ -435,7 +437,7 @@ public class PlayerShooting : MonoBehaviour
                     gameObject.GetComponent<AudioSource>().Play();
                     Vector3 BulletSpawmPosition = GunEffectSpawmPosition.transform.position;
                     GameObject BulletAtual = Instantiate(Slot1_BulletPrefab, BulletSpawmPosition, Quaternion.identity);
-                    BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * Slot1_BulletSpeed;
+                    BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection(true) * Slot1_BulletSpeed;
                     ShootLightEfectFunction();
                     Slot1_Ammo--;
                     AmmoText.text = Slot1_Ammo.ToString() + "/" + Slot1_TotalAmmo.ToString();
@@ -458,7 +460,7 @@ public class PlayerShooting : MonoBehaviour
                     Vector3 BulletSpawmPosition = gameObject.transform.position;
                     BulletSpawmPosition.y += 0.5f;
                     GameObject BulletAtual = Instantiate(Slot2_BulletPrefab, BulletSpawmPosition, Quaternion.identity);
-                    BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * Slot2_BulletSpeed;
+                    BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection(true) * Slot2_BulletSpeed;
                     ShootLightEfectFunction();
                     Slot2_Ammo--;
                     AmmoText.text = Slot2_Ammo.ToString() + "/" + Slot2_TotalAmmo.ToString();
@@ -481,7 +483,7 @@ public class PlayerShooting : MonoBehaviour
                     Vector3 BulletSpawmPosition = gameObject.transform.position;
                     BulletSpawmPosition.y += 0.5f;
                     GameObject BulletAtual = Instantiate(Slot3_BulletPrefab, BulletSpawmPosition, Quaternion.identity);
-                    BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * Slot3_BulletSpeed;
+                    BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection(true) * Slot3_BulletSpeed;
                     ShootLightEfectFunction();
                     Slot3_Ammo--;
                     AmmoText.text = Slot3_Ammo.ToString() + "/" + Slot3_TotalAmmo.ToString();
@@ -504,7 +506,7 @@ public class PlayerShooting : MonoBehaviour
                     Vector3 BulletSpawmPosition = gameObject.transform.position;
                     BulletSpawmPosition.y += 0.5f;
                     GameObject BulletAtual = Instantiate(Slot4_BulletPrefab, BulletSpawmPosition, Quaternion.identity);
-                    BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection() * Slot4_BulletSpeed;
+                    BulletAtual.GetComponent<Rigidbody2D>().velocity = PlayerMovment.GetMouseDirection(true) * Slot4_BulletSpeed;
                     ShootLightEfectFunction();
                     Slot4_Ammo--;
                     AmmoText.text = Slot4_Ammo.ToString() + "/" + Slot4_TotalAmmo.ToString();

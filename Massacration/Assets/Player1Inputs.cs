@@ -143,6 +143,15 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LookDistant"",
+                    ""type"": ""Button"",
+                    ""id"": ""a3c92613-370a-4a7c-86f9-bde63e1b5d6e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -574,6 +583,28 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
                     ""action"": ""MelleAtack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c11400c5-2c54-4741-a856-0d432727b390"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LookDistant"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""66c567ad-3268-4d09-bcbc-0b6fd726eea3"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LookDistant"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -595,6 +626,7 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
         m_Player1_Interact = m_Player1.FindAction("Interact", throwIfNotFound: true);
         m_Player1_Pause = m_Player1.FindAction("Pause", throwIfNotFound: true);
         m_Player1_MelleAtack = m_Player1.FindAction("MelleAtack", throwIfNotFound: true);
+        m_Player1_LookDistant = m_Player1.FindAction("LookDistant", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -669,6 +701,7 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player1_Interact;
     private readonly InputAction m_Player1_Pause;
     private readonly InputAction m_Player1_MelleAtack;
+    private readonly InputAction m_Player1_LookDistant;
     public struct Player1Actions
     {
         private @Player1Inputs m_Wrapper;
@@ -686,6 +719,7 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Player1_Interact;
         public InputAction @Pause => m_Wrapper.m_Player1_Pause;
         public InputAction @MelleAtack => m_Wrapper.m_Player1_MelleAtack;
+        public InputAction @LookDistant => m_Wrapper.m_Player1_LookDistant;
         public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -734,6 +768,9 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
             @MelleAtack.started += instance.OnMelleAtack;
             @MelleAtack.performed += instance.OnMelleAtack;
             @MelleAtack.canceled += instance.OnMelleAtack;
+            @LookDistant.started += instance.OnLookDistant;
+            @LookDistant.performed += instance.OnLookDistant;
+            @LookDistant.canceled += instance.OnLookDistant;
         }
 
         private void UnregisterCallbacks(IPlayer1Actions instance)
@@ -777,6 +814,9 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
             @MelleAtack.started -= instance.OnMelleAtack;
             @MelleAtack.performed -= instance.OnMelleAtack;
             @MelleAtack.canceled -= instance.OnMelleAtack;
+            @LookDistant.started -= instance.OnLookDistant;
+            @LookDistant.performed -= instance.OnLookDistant;
+            @LookDistant.canceled -= instance.OnLookDistant;
         }
 
         public void RemoveCallbacks(IPlayer1Actions instance)
@@ -809,5 +849,6 @@ public partial class @Player1Inputs: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnMelleAtack(InputAction.CallbackContext context);
+        void OnLookDistant(InputAction.CallbackContext context);
     }
 }
