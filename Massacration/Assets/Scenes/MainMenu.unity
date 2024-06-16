@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 111570169}
   - component: {fileID: 111570168}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Settings Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1239,7 +1239,7 @@ GameObject:
   - component: {fileID: 701938888}
   - component: {fileID: 701938887}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Play Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1373,7 +1373,7 @@ GameObject:
   - component: {fileID: 756440093}
   - component: {fileID: 756440092}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Shop Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1826,7 +1826,7 @@ GameObject:
   - component: {fileID: 1193107652}
   - component: {fileID: 1193107651}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Exit Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2282,7 +2282,7 @@ GameObject:
   - component: {fileID: 1408679362}
   - component: {fileID: 1408679361}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Credits Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2546,9 +2546,14 @@ MonoBehaviour:
   Credits: {fileID: 1616592391}
   CreditsDelay: 0
   Exit: {fileID: 2135020030}
+  PlayText: {fileID: 701938887}
+  ShopText: {fileID: 756440092}
+  StatsText: {fileID: 1867508785}
+  SettingsText: {fileID: 111570168}
+  CreditsText: {fileID: 1408679361}
+  ExitText: {fileID: 1193107651}
   ArrowUp: {fileID: 0}
   ArrowDown: {fileID: 0}
-  MenuAudioSource: {fileID: 393614003}
 --- !u!4 &1512060171
 Transform:
   m_ObjectHideFlags: 0
@@ -2959,7 +2964,7 @@ GameObject:
   - component: {fileID: 1867508786}
   - component: {fileID: 1867508785}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Stats Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

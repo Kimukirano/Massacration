@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuControler : MonoBehaviour
 {
+    [Header("Scenes Objects")]
     [SerializeField] GameObject Play;
     [SerializeField] private float PlayDelay;
     [SerializeField] GameObject Shop;
@@ -16,7 +19,14 @@ public class MenuControler : MonoBehaviour
     [SerializeField] GameObject Credits;
     [SerializeField] private float CreditsDelay;
     [SerializeField] GameObject Exit;
-
+    [Header("Text Objs")]
+    [SerializeField] private TMP_Text PlayText;
+    [SerializeField] private TMP_Text ShopText;
+    [SerializeField] private TMP_Text StatsText;
+    [SerializeField] private TMP_Text SettingsText;
+    [SerializeField] private TMP_Text CreditsText;
+    [SerializeField] private TMP_Text ExitText;
+    private string[] lines;
     [SerializeField] GameObject ArrowUp;
     [SerializeField] GameObject ArrowDown;
 
@@ -95,6 +105,13 @@ public class MenuControler : MonoBehaviour
         MenuElements[3] = Settings;
         MenuElements[4] = Credits;
         MenuElements[5] = Exit;
+        lines = File.ReadAllLines("Assets/Texts/MassacrationText.txt");
+        PlayText.text = lines[0];
+        ShopText.text = lines[1];
+        StatsText.text = lines[2];
+        SettingsText.text = lines[3];
+        CreditsText.text = lines[4];
+        ExitText.text = lines[5];
     }
 
     // Update is called once per frame

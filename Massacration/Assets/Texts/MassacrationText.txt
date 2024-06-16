@@ -1,0 +1,6 @@
+Play
+Shop
+Stats
+Settings
+Credits
+Exit

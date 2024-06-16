@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: Massacration
-  defaultCursor: {fileID: 2800000, guid: e69e64af3dd6c5c4391827796830861f, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 4d92c350ac6943b49b78aece139c1dbc, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1

@@ -2,6 +2,8 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Collections.LowLevel.Unsafe;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
@@ -28,8 +30,11 @@ public class SecurityGuardAI : MonoBehaviour
     private Vector3 BloodVFXposition;
     private GameObject Player;
     [SerializeField] public int AtackDamage;
+    [SerializeField] private float BulletSpeed;
     [Range(0f, 2f)] public float FirstAtackDelay;
     [Range(0f, 2f)] public float AtackCooldown;
+    [SerializeField] public float rotationSpeed = 90f;
+    private float t = 0.0f;
     public delegate void LooseHPdelegate(int dmg);
     public static event LooseHPdelegate looseHPdelegate;
     public PlayerStats playerStats;
@@ -99,18 +104,44 @@ public class SecurityGuardAI : MonoBehaviour
     }
     public void ShootPlayer()
     {
+        OnShootDelay = true;
+        
+        Vector3 CurrentAngle = SpawmBulletLocation.transform.position - transform.position;
+        CurrentAngle.Normalize();
+        CurrentAngle.z = Camera.main.transform.rotation.z;
+
+        GameObject InstantiatedBullet = Instantiate(Bullet, SpawmBulletLocation.transform.position, Quaternion.identity);
+        InstantiatedBullet.GetComponent<Rigidbody2D>().velocity = CurrentAngle * BulletSpeed;
+        
+        Invoke("PrepareForNextShoot", AtackCooldown);
+    }
+    private void RotateAimToPlayer()
+    {
         Vector3 ShootDirection = Player.transform.position - gameObject.transform.position;
         ShootDirection.Normalize();
 
-        float angle = Mathf.Atan2(ShootDirection.y, ShootDirection.x) * Mathf.Rad2Deg;
-        Quaternion rotacao = Quaternion.AngleAxis(angle , Vector3.forward);
-        transform.rotation = rotacao;
+        Vector3 CurrentAngle = SpawmBulletLocation.transform.position - transform.position;
+        CurrentAngle.Normalize();
+        CurrentAngle.z = Camera.main.transform.rotation.z;
 
-        GameObject InstantiatedBullet = Instantiate(Bullet, SpawmBulletLocation.transform.position, Quaternion.identity);
-        InstantiatedBullet.GetComponent<Rigidbody2D>().velocity = ShootDirection * 200;
-        OnShootDelay = true;
-        Invoke("PrepareForNextShoot", AtackCooldown);
+        // Incrementar t com base na velocidade e no tempo
+        t += Time.deltaTime * rotationSpeed;
+
+        // Interpolação linear entre os vetores
+        Vector3 currentVector = Vector3.Lerp(CurrentAngle, ShootDirection, t).normalized;
+
+        float angle = Mathf.Atan2(currentVector.y, currentVector.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+        // Resetar t se ultrapassar 1
+        if (t > 1.0f)
+        {
+            t = 0.0f;
+        }
+
+
     }
+
     public void PrepareForNextShoot()
     {
         OnShootDelay = false;
@@ -177,6 +208,9 @@ public class SecurityGuardAI : MonoBehaviour
             if (agent.Raycast(Player.transform.position, out hit) == false)
             {
                 agent.isStopped = true;
+
+                RotateAimToPlayer();
+
                 if (OnShootDelay == false)
                 {
                     ShootPlayer();

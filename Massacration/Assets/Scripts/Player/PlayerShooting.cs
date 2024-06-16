@@ -55,6 +55,7 @@ public class PlayerShooting : MonoBehaviour
         velocity,
     }
     public RecoilMode recoilMode;
+
     [SerializeField] Color UnselectedWeaponColor;
     [SerializeField] Color SelectedWeaponColor;
     public enum UsingWeapon
